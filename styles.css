@@ -1,0 +1,21 @@
+﻿/* Center the text */
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    margin: 0;
+}
+
+/* Change the font and scale */
+.centered-text h1 {
+    font-family: 'Arial', sans-serif; /* Change to your desired font */
+    font-size: 3rem; /* Adjust size as needed */
+    transform: scale(1.1); /* Scale the text */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.centered-text h1:hover {
+    transform: scale(1.2); /* Slightly larger on hover */
+}
