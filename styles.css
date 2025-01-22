@@ -19,3 +19,7 @@
 .centered-text h1:hover {
     transform: scale(1.2); /* Slightly larger on hover */
 }
+
+body {
+    background-image: url('img_girl.jpg');
+}
