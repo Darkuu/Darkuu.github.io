@@ -2,17 +2,251 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Darku's Website$</title>
-    <link rel="stylesheet" href="https://github.com/Darkuu/Darkuu.github.io/styles.css">
+    <title>Darku's Website</title>
+  
+    <!-- Load Bootstrap first -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+    <!-- Then load your custom CSS (which overrides Bootstrap) -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-<h1> Hi.</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="title text-center">
+          <h1>Rihards / Darku</h1>
+          <h4><a href="https://github.com/Darkuu">My Github</a></h4>
+          <hr />
+          <ul class="list-inline">
+            <li><i class="devicon-laravel-plain colored"></i></li>
+            <li><i class="devicon-javascript-plain colored"></i></li>
+            <li><i class="devicon-html5-plain colored"></i></li>
+            <li><i class="devicon-angularjs-plain colored"></i></li>
+            <li><i class="devicon-linux-plain"></i></li>
+          </ul>
+        </div>
+        
+        <!-- Summary section -->
+        <div class="summary">
+          <p class="centered-content">
+            <br>A passionate Game Design and Graphics student.
+            <br> I specialize in game design and development, with a strong focus on the technical side — programming, system design, and bringing everything together to make it all work.
+            <br> I also dabble in Blender from time to time, mostly for fun.
+          </p>
+        </div>
 
-I'm Darku, a passionate Game Design and Graphics student .
-I specialize in designing games, creating them and producing creative works of all kinds.
-Explore my portfolio to see some of the projects I've brought to life.
+        <!-- Game Title -->
+        <div class="container">
+            <div class="summary">
+                <p class="centered-content"> 
+                    Here are some of my games! 
+                </p>
+            </div>
+        </div>
 
+        <div class="row g-5">
+            <!-- Game 1 -->
+            <div class="col-md-4">
+              <a href="https://github.com/Darkuu/LandGenerator" class="card-link" target="_blank"> 
+                <div class="card">
+                  <img src="Thumbnails/NoiseGame.jpg" alt="Noise Terrain Generator" class="card-img-top">
+                  <div class="overlay">
+                    <p>A very basic noise terrain generator — this was one of my first projects!</p>
+                  </div>
+                </div>
+              </a>
+            </div>
 
-Blender | Unity | Misc
+            <!-- Game 2 -->
+            <div class="col-md-4">
+              <a href="https://github.com/Darkuu/EKA-Escape_Room" class="card-link" target="_blank">
+                <div class="card">
+                  <img src="Thumbnails/VREscapeRoom.png" alt="VR Escape Room" class="card-img-top">
+                  <div class="overlay">
+                    <p>A basic VR escape room I made for my final work for VR lectures!</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="col-md-4">
+              <a href="https://github.com/Darkuu/EKA-Kompozicija" class="card-link" target="_blank">
+                <div class="card">
+                  <img src="Thumbnails/ArtGame.png" alt="Art Learning Game for Children" class="card-img-top">
+                  <div class="overlay">
+                    <p>A basic game made for children to learn about art for my final Composition work.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+        </div>
+
+        <!-- Artwork Title -->
+        <div class="container">
+            <div class="summary">
+                <p class="centered-content"> 
+                    Here are some of my artwork projects!
+                </p>
+            </div>
+
+            <div class="row g-5">
+              <!-- Artwork 1 -->
+              <div class="col-md-4">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#artworkModal1">
+                  <div class="card">
+                    <img src="Thumbnails/Character01.png" alt="Artwork 1" class="card-img-top">
+                    <div class="overlay">
+                      <p>The first dwarf fully made by me in Blender, for my Anatomy class.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Artwork 2 -->
+              <div class="col-md-4">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#artworkModal2">
+                  <div class="card">
+                    <img src="Thumbnails/Character02.png" alt="Artwork 2" class="card-img-top">
+                    <div class="overlay">
+                       <p>The second dwarf fully made by me in Blender, for my Anatomy class.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Artwork 3 -->
+              <div class="col-md-4">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#artworkModal3">
+                  <div class="card">
+                    <img src="Thumbnails/Character03.png" alt="Artwork 3" class="card-img-top">
+                    <div class="overlay">
+                      <p>The third dwarf fully made by me in Blender, for my Anatomy class.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Artwork 4 -->
+              <div class="col-md-4">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#artworkModal4">
+                  <div class="card">
+                    <img src="Thumbnails/TauThumb.png" alt="Artwork 3" class="card-img-top">
+                    <div class="overlay">
+                      <p>A TAU inspired battlesuit made for my Blender lectures..</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Artwork 5 -->
+              <div class="col-md-4">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#artworkModal5">
+                  <div class="card">
+                    <img src="Thumbnails/Foxhound.png" alt="Artwork 5" class="card-img-top">
+                    <div class="overlay">
+                      <p>A small project made for my friends.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+
+        <!-- Modal for Artwork 1 -->
+        <div class="modal fade" id="artworkModal1" tabindex="-1" role="dialog" aria-labelledby="artworkModalLabel1" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="artworkModalLabel1">Dwarf 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="Thumbnails/Character01.png" alt="Artwork 1" class="img-fluid custom-modal-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for Artwork 2 -->
+        <div class="modal fade" id="artworkModal2" tabindex="-1" role="dialog" aria-labelledby="artworkModalLabel2" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="artworkModalLabel2">Dwarf 2</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="Thumbnails/Character02.png" alt="Artwork 2" class="img-fluid custom-modal-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for Artwork 3 -->
+        <div class="modal fade" id="artworkModal3" tabindex="-1" role="dialog" aria-labelledby="artworkModalLabel3" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="artworkModalLabel3">Dwarf 3</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="Thumbnails/Character03.png" alt="Artwork 3" class="img-fluid custom-modal-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for Artwork 4 -->
+        <div class="modal fade" id="artworkModal4" tabindex="-1" role="dialog" aria-labelledby="artworkModalLabel4" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="artworkModalLabel4">Tau GIF</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="Thumbnails/TauGif.gif" alt="Tau GIF" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for Artwork 5 -->
+        <div class="modal fade" id="artworkModal5" tabindex="-1" role="dialog" aria-labelledby="artworkModalLabel5" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="artworkModalLabel5">FoxHound</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="Thumbnails/Foxhound.png" alt="Artwork 5" class="img-fluid custom-modal-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap and jQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

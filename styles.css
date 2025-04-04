@@ -1,25 +1,116 @@
-﻿/* Center the text */
-.centered-text {
+﻿body {
+  background: #1B1B25;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.title {
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.title a {
+  color: #DB4D57;
+}
+
+.title a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.title hr {
+  width: 85%;
+}
+
+.summary {
+  padding: 20px;
+}
+
+.summary p {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.games {
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; 
+  max-width: 150%;
+  height: auto; 
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center; 
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay on hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive behavior for cards */
+.col-md-4 {
+  flex: 0 0 33.33%;  
+  max-width: 33.33%;  
+  margin-bottom: 30px;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.1); 
+  z-index: 10; 
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* MODAL */
+  .modal-body {
+    padding: 0;  
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    text-align: center;
-    margin: 0;
-}
+    flex-direction: column;
+  }
 
-/* Change the font and scale */
-.centered-text h1 {
-    font-family: 'Arial', sans-serif; /* Change to your desired font */
-    font-size: 3rem; /* Adjust size as needed */
-    transform: scale(1.1); /* Scale the text */
-    transition: transform 0.3s ease; /* Smooth scale transition */
-}
+  .img-fluid {
+    max-width: 90vw;
+    height: auto;
+  }
 
-.centered-text h1:hover {
-    transform: scale(1.2); /* Slightly larger on hover */
-}
 
-body {
-    background-image: url('img_girl.jpg');
 }
