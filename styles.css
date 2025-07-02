@@ -1,116 +1,189 @@
-﻿body {
-  background: #1B1B25;
-  color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+﻿:root {
+    --bgColor: #C8C2AA;
+    --color: #4D493E;
+    --letterSpacing: 0.1rem;
+    --boxShadow: 3px 3px 0 rgba(77, 73, 62, 0.6);
 }
 
-.title {
-  margin-top: 100px;
-  margin-bottom: 10px;
+* {
+    box-sizing: border-box;
 }
 
-.title a {
-  color: #DB4D57;
+*:focus {
+ outline: none !important;
 }
 
-.title a:hover {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.title hr {
-  width: 85%;
-}
-
-.summary {
-  padding: 20px;
-}
-
-.summary p {
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-}
-
-.games {
-  padding: 20px;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%; 
-  max-width: 150%;
-  height: auto; 
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-origin: center; 
-}
-
-.card-img-top {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Overlay on hover */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease;
-  text-align: center;
-}
-
-.card:hover .overlay {
-  opacity: 1;
-}
-
-/* Responsive behavior for cards */
-.col-md-4 {
-  flex: 0 0 33.33%;  
-  max-width: 33.33%;  
-  margin-bottom: 30px;  
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
-
-.card:hover {
-  transform: scale(1.1); 
-  z-index: 10; 
+body {
+    background-color: var(--bgColor);
+    background-size: 4px 4px;
+    background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px), linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
+    color: var(--color);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    min-height: 100vh;
+    box-shadow: inset 0 0 150px rgba(77, 73, 62, 0.4), inset 0 0 150px rgba(77, 73, 62, 0.3);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: var(--letterSpacing);
 }
 
 .container {
-  padding-left: 0;
-  padding-right: 0;
+    padding: 0 4rem;
+    gap: 1.5rem;
 }
 
-/* MODAL */
-  .modal-body {
-    padding: 0;  
+header {
+    padding: 1rem 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.7rem;
+    text-shadow: 0.3rem 0.3rem 0 rgba(77, 73, 62, 0.3);
+}
+
+    h1 span {
+        margin-right: -0.7rem;
+    }
+
+    h1 small::before {
+        content: "– ";
+    }
+
+    h1 small {
+        font-weight: 500;
+        text-transform: none;
+        text-shadow: none;
+        letter-spacing: var(--letterSpacing);
+    }
+
+.pattern {
+    border-top: 2px solid var(--color);
+}
+
+.pattern-inner {
+    height: 40px;
+    background-size: 50px 3px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px;
+    background-position: 0 0, 22px 4px, 22px 5px, 22px 6px, 22px 7px, 28px 12px, 28px 13px, 28px 14px, 28px 15px;
+    background-image: linear-gradient(90deg, var(--color), var(--color) 10px, transparent 10px), linear-gradient(90deg, rgba(77, 73, 62, 0.4), rgba(77, 73, 62, 0.4) 1px, rgba(77, 73, 62, 0.8) 1px, rgba(77, 73, 62, 0.8) 2px, rgba(77, 73, 62, 0.9) 2px, rgba(77, 73, 62, 0.9) 3px, rgba(77, 73, 62, 0.4) 3px, rgba(77, 73, 62, 0.4) 4px, transparent 4px, transparent 12px, rgba(77, 73, 62, 0.4) 12px, rgba(77, 73, 62, 0.4) 13px, rgba(77, 73, 62, 0.8) 13px, rgba(77, 73, 62, 0.8) 14px, rgba(77, 73, 62, 0.9) 14px, rgba(77, 73, 62, 0.9) 15px, rgba(77, 73, 62, 0.4) 15px, rgba(77, 73, 62, 0.4) 16px, transparent 16px), linear-gradient(90deg, rgba(77, 73, 62, 0.9), rgba(77, 73, 62, 0.9) 1px, rgba(77, 73, 62, 1) 1px, rgba(77, 73, 62, 1) 3px, rgba(77, 73, 62, 0.9) 3px, rgba(77, 73, 62, 0.9) 4px, transparent 4px, transparent 12px, rgba(77, 73, 62, 0.9) 12px, rgba(77, 73, 62, 0.9) 13px, rgba(77, 73, 62, 1) 13px, rgba(77, 73, 62, 1) 15px, rgba(77, 73, 62, 0.9) 15px, rgba(77, 73, 62, 0.9) 16px, transparent 16px);
+    background-repeat: repeat-x;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    padding: 0.4rem 1rem;
+    background-color: rgba(77, 73, 62, 0.35);
+    color: var(--color);
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    width: 220px;
+    display: block;
+}
+
+button::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 3px;
+        bottom: 3px;
+        width: 0;
+        background-color: var(--color);
+        transition: width 0.2s;
+    }
+
+button::after {
+        content: "";
+        display: none;
+        position: absolute;
+        background: var(--color);
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: -4px;
+}
+
+button:hover,
+button:focus {
+        background-color: transparent;
+        color: var(--bgColor);
+        border-color: var(--color);
+}
+
+button:hover::before,
+button:focus::before {
+            width: 100%;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 80%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+.card:hover {
+        transform: scale(1.1);
+}
+
+.card-inactive {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 80%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+.card-inactive:hover {
+    transform: scale(1.1);
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.modal-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-  }
+}
 
-  .img-fluid {
-    max-width: 90vw;
-    height: auto;
-  }
+/* Fix size for images inside video-preview cards */
+.video-preview .card-img-top {
+    width: 100%; /* Full width of card */
+    height: 200px; /* Fixed height, adjust as needed */
+    object-fit: cover; /* Crop/scale the image to fit without distortion */
+}
 
 
+
+#modalImage {
+    max-height: 80vh;
+    width: auto;
+}
+
+#modalDescription {
+    font-size: 1.25rem;
 }
