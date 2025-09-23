@@ -17,21 +17,33 @@
         <div class="container text-center mt-4">
             <h1><span>DARKU</span><br /><small>a small collection of my projects</small></h1>
             <p>
-                I'm a passionate Game Design and Graphics student focused on technical game development — programming, system design, and implementation.<br />
-                I also explore 3D modeling in Blender to blend logic with creativity. <br /> <br /> <br />
-                Click on any of the cards to see a preview!
+                I'm a passionate Game Design and Graphics student focused on game development, while i studied as a programmer i am passionate about everything related to game design!<br/>
+                I also dabble in arts, such as Blender and Pixelart <br /> <br />
+                <h3>Click on any of the cards to see a preview!</h3>
             </p>
-            <button class="custom-button" type="button" data-toggle="collapse" data-target="#gameProjects">Game Projects</button>
-            <button class="custom-button" type="button" data-toggle="collapse" data-target="#blenderProjects">Blender Projects</button>
-            <button class="custom-button" type="button" data-toggle="collapse" data-target="#miscProjects">Misc Projects</button>
             <div class="pattern"> </div>
         </div>
     </header>
 
     <main class="container mt-4">
 
+        <!-- Highlighted Project: Tau Steam Workshop -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-md-4">
+                <div class="card" style="cursor:pointer;" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=3513769630', '_blank')">
+                    <img src="Thumbnails/LVSTau.png" class="card-img-top" alt="Tau Steam Workshop" />
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h3>LVS] Tau Vehicles - Warhammer 40,000 </h3>
+                <p>
+                    This is my most popular project to date. It’s a Garry’s Mod addon that i created as a challange for myself to learn LUA and exporting different engine game models to blender and then to source, it currently has <b>3,380 Unique Visitors</b>, 1,110 Subscribers and 190 Favourites. 
+                </p>
+            </div>
+        </div>
+
         <!-- Game Projects -->
-        <div id="gameProjects" class="collapse">
+        <div id="gameProjects" class="collapse show">
             <h3>Game Projects</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -67,19 +79,11 @@
                         <div class="overlay">An art-based educational game for children.</div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card"
-                         style="cursor:pointer;"
-                         onclick="window.open('https://github.com/Darkuu/Project-Spider', '_blank')">
-                        <img src="Thumbnails/SpiderMeadow.png" class="card-img-top" alt="VR Escape Room" />
-                        <div class="overlay">A game where you farm bugs, made for my Course Studies.</div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <!-- Blender Projects -->
-        <div id="blenderProjects" class="collapse mt-5">
+        <div id="blenderProjects" class="collapse show mt-5">
             <h3>Blender Projects</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -116,7 +120,6 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <!-- Tau Suit card with GIF hover -->
                     <div class="card project-card video-preview"
                          data-toggle="modal" data-target="#projectModal"
                          data-title="Tau Suit"
@@ -132,7 +135,7 @@
         </div>
 
         <!-- Misc Projects -->
-        <div id="miscProjects" class="collapse mt-5">
+        <div id="miscProjects" class="collapse show mt-5">
             <h3>Misc Projects</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -140,40 +143,18 @@
                          data-toggle="modal" data-target="#projectModal"
                          data-title="FDwarf 1"
                          data-image="Thumbnails/Foxhound.png"
-                         data-description="A propoganda poster i made for my friends."
+                         data-description="A propaganda poster I made for my friends."
                          style="cursor:pointer;">
                         <img src="Thumbnails/Foxhound.png" class="card-img-top" alt="Foxhound" />
-                        <div class="overlay">A propoganda poster i made for my friends.</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card"
-                         style="cursor:pointer;"
-                         onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=3513769630', '_blank')">
-                        <img src="Thumbnails/LVSTau.png" class="card-img-top" alt="Dwarf 2" />
-                        <div class="overlay">A Mod i created for Garry's Mod.</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- Tau Suit card with GIF hover -->
-                    <div class="card-inactive"
-                         data-toggle="modal" data-target="#projectModal"
-                         data-title="Tau Suit"
-                         data-image="Thumbnails/TauThumb.png"
-                         data-gif="Thumbnails/TauGif.gif"
-                         data-description="A TAU-inspired battlesuit made for Blender lectures."
-                         style="cursor:pointer;"
-                         onclick="window.open('https://github.com/Darkuu/EKA-Escape_Room', '_blank')">
-                        <img src="Thumbnails/TauThumb.png" class="card-img-top" alt="Tau Suit" />
-                        <div class="overlay">A TAU-inspired battlesuit made for Blender lectures.</div>
+                        <div class="overlay">A propaganda poster I made for my friends.</div>
                     </div>
                 </div>
             </div>
         </div>
+
     </main>
 
-
-    <!-- Bootstrap JS for Collapse and Modal -->
+    <!-- Bootstrap JS for Modal -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -181,13 +162,7 @@
     <!-- Custom JS -->
     <script>
         $(document).ready(function () {
-            // Close other collapses when one button is clicked
-            $('.custom-button').click(function () {
-                var target = $(this).data('target');
-                $('.collapse').not(target).collapse('hide');
-            });
-
-            // GIF hover effect only for cards with .video-preview
+            // GIF hover effect for .video-preview cards
             $('.video-preview').hover(
                 function () {
                     var gifSrc = $(this).data('gif');
@@ -215,10 +190,8 @@
                 $('#modalDescription').text(description);
 
                 if (isVideoPreview && gif) {
-                    // Show gif in modal image
                     $('#modalImage').attr('src', gif).attr('alt', title).show();
                 } else {
-                    // Show regular image
                     $('#modalImage').attr('src', image).attr('alt', title).show();
                 }
 
@@ -244,7 +217,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 </html>
