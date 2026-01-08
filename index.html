@@ -2,151 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Darku's Website</title>
+    <title>Rihards Zorgis Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./styles.css" />
+    <style>
+        /* Carousel thumbnails styling */
+        #carouselThumbnails img {
+            width: 80px;
+            height: 60px;
+            cursor: pointer;
+            margin: 2px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+        }
+
+            #carouselThumbnails img.active {
+                border-color: var(--color);
+            }
+
+        /* Make carousel main image fit nicely */
+        #projectCarousel .carousel-item img {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+
+        #modalLink {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--color);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="pattern">
-            <div class="container">
-                <div class="pattern-inner"></div>
-            </div>
-        </div>
-        <div class="container text-center mt-4">
-            <h1><span>DARKU</span><br /><small>a small collection of my projects</small></h1>
-            <p>
-                I'm a passionate Game Design and Graphics student focused on game development, while i studied as a programmer i am passionate about everything related to game design!<br/>
-                I also dabble in arts, such as Blender and Pixelart <br /> <br />
-                <h3>Click on any of the cards to see a preview!</h3>
-            </p>
-            <div class="pattern"> </div>
-        </div>
+    <header class="text-center mt-4">
+        <h1><span>Rihards Zorgis</span><br><small>An insight into me</small></h1>
+        <p class="mt-2">
+            I'm a passionate Game Design and Graphics student focused on game development.<br>
+            I also dabble in data organization, Blender modeling, and game modification.<br>
+            <strong>Click on any card to see more information!</strong>
+        </p>
     </header>
 
     <main class="container mt-4">
 
-        <!-- Highlighted Project: Tau Steam Workshop -->
+        <!-- =================== -->
+        <!-- Highlighted Project -->
+        <!-- =================== -->
         <div class="row mb-5 align-items-center">
             <div class="col-md-4">
-                <div class="card" style="cursor:pointer;" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=3513769630', '_blank')">
+                <div class="card project-card video-preview"
+                     data-title="LVS] Tau Vehicles - Warhammer 40,000"
+                     data-images='["Thumbnails/GmodTau.png","Thumbnails/GmodTau3.png","Thumbnails/GmodTau2.png"]'
+                     data-description="This is my most popular project to date. It’s a Garry’s Mod addon I created to learn LUA and model exporting workflows. Currently 5,000+ Unique Visitors, 1,400+ Subscribers, and 250 Favourites."
+                     data-link="https://steamcommunity.com/sharedfiles/filedetails/?id=3513769630">
                     <img src="Thumbnails/LVSTau.png" class="card-img-top" alt="Tau Steam Workshop" />
+                    <div class="overlay">LVS] Tau Vehicles - Warhammer 40,000</div>
                 </div>
             </div>
             <div class="col-md-8">
-                <h3>LVS] Tau Vehicles - Warhammer 40,000 </h3>
-                <p>
-                    This is my most popular project to date. It’s a Garry’s Mod addon that i created as a challange for myself to learn LUA and exporting different engine game models to blender and then to source, it currently has <b>3,380 Unique Visitors</b>, 1,110 Subscribers and 190 Favourites. 
-                </p>
+                <h3>[LVS] Tau Vehicles - Warhammer 40,000</h3>
+                <p>My most popular project, a Garry's Mod addon. A challenge project to refresh my LUA knowledge and model exporting workflows.</p>
             </div>
         </div>
 
+        <!-- =================== -->
         <!-- Game Projects -->
-        <div id="gameProjects" class="collapse show">
+        <!-- =================== -->
+        <div id="gameProjects" class="mb-5">
             <h3>Game Projects</h3>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card"
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card"
                          data-title="Noise Game"
-                         data-image="Thumbnails/NoiseGame.jpg"
-                         data-description="A very basic noise terrain generator — one of my first projects!"
-                         style="cursor:pointer;"
-                         onclick="window.open('https://github.com/Darkuu/LandGenerator', '_blank')">
+                         data-images='["Thumbnails/NoiseGame.jpg","Thumbnails/NoiseGame_alt.jpg"]'
+                         data-description="A very basic noise terrain generator, one of my first projects!"
+                         data-link="https://github.com/Darkuu/LandGenerator">
                         <img src="Thumbnails/NoiseGame.jpg" class="card-img-top" alt="Noise Game" />
-                        <div class="overlay">A very basic noise terrain generator — one of my first projects!</div>
+                        <div class="overlay">Noise Map Generator</div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card"
+
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card"
                          data-title="VR Escape Room"
-                         data-image="Thumbnails/VREscapeRoom.png"
+                         data-images='["Thumbnails/VREscapeRoom.png"]'
                          data-description="VR escape room created as final work for VR lectures."
-                         style="cursor:pointer;"
-                         onclick="window.open('https://github.com/Darkuu/EKA-Escape_Room', '_blank')">
+                         data-link="https://github.com/Darkuu/EKA-Escape_Room">
                         <img src="Thumbnails/VREscapeRoom.png" class="card-img-top" alt="VR Escape Room" />
-                        <div class="overlay">VR escape room created as final work for VR lectures.</div>
+                        <div class="overlay">VR Escape Room</div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card"
+
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card"
                          data-title="Art Game"
-                         data-image="Thumbnails/SpiderMeadow.png"
-                         data-description="A game where you farm bugs, made for my Course Studies."
-                         style="cursor:pointer;"
-                         onclick="window.open('https://github.com/Darkuu/EKA-Kompozicija', '_blank')">
+                         data-images='["Thumbnails/ArtGame.png"]'
+                         data-description="A game where you grade art, made for my studies."
+                         data-link="https://github.com/Darkuu/EKA-Kompozicija">
                         <img src="Thumbnails/ArtGame.png" class="card-img-top" alt="Art Game" />
-                        <div class="overlay">An art-based educational game for children.</div>
+                        <div class="overlay">Art Game</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- =================== -->
         <!-- Blender Projects -->
-        <div id="blenderProjects" class="collapse show mt-5">
+        <!-- =================== -->
+        <div id="blenderProjects" class="mb-5">
             <h3>Blender Projects</h3>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card project-card"
-                         data-toggle="modal" data-target="#projectModal"
                          data-title="Dwarf 1"
-                         data-image="Thumbnails/Character01.png"
-                         data-description="First dwarf made in Blender for Anatomy class."
-                         style="cursor:pointer;">
+                         data-images='["Thumbnails/Character01.png","Thumbnails/Character01_alt.png"]'
+                         data-description="First dwarf made in Blender for Anatomy class.">
                         <img src="Thumbnails/Character01.png" class="card-img-top" alt="Dwarf 1" />
-                        <div class="overlay">First dwarf made in Blender for Anatomy class.</div>
+                        <div class="overlay">Dwarf 1</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card project-card"
-                         data-toggle="modal" data-target="#projectModal"
                          data-title="Dwarf 2"
-                         data-image="Thumbnails/Character02.png"
-                         data-description="Second dwarf from the same project series."
-                         style="cursor:pointer;">
+                         data-images='["Thumbnails/Character02.png"]'
+                         data-description="Second dwarf from the same project series.">
                         <img src="Thumbnails/Character02.png" class="card-img-top" alt="Dwarf 2" />
-                        <div class="overlay">Second dwarf from the same project series.</div>
+                        <div class="overlay">Dwarf 2</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card project-card"
-                         data-toggle="modal" data-target="#projectModal"
                          data-title="Dwarf 3"
-                         data-image="Thumbnails/Character03.png"
-                         data-description="Third dwarf, fully modeled and textured."
-                         style="cursor:pointer;">
+                         data-images='["Thumbnails/Character03.png"]'
+                         data-description="Third dwarf, fully modeled and textured.">
                         <img src="Thumbnails/Character03.png" class="card-img-top" alt="Dwarf 3" />
-                        <div class="overlay">Third dwarf, fully modeled and textured.</div>
+                        <div class="overlay">Dwarf 3</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+
+                <div class="col-md-4 mb-4">
                     <div class="card project-card video-preview"
-                         data-toggle="modal" data-target="#projectModal"
                          data-title="Tau Suit"
-                         data-image="Thumbnails/TauThumb.png"
+                         data-images='["Thumbnails/TauThumb.png","Thumbnails/TauThumb_alt.png"]'
                          data-gif="Thumbnails/TauGif.gif"
                          data-description="A TAU-inspired battlesuit made for Blender lectures."
-                         style="cursor:pointer;">
+                         data-link="https://steamcommunity.com/sharedfiles/filedetails/?id=3513769630">
                         <img src="Thumbnails/TauThumb.png" class="card-img-top" alt="Tau Suit" />
-                        <div class="overlay">A TAU-inspired battlesuit made for Blender lectures.</div>
+                        <div class="overlay">Tau Suit</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- =================== -->
         <!-- Misc Projects -->
-        <div id="miscProjects" class="collapse show mt-5">
+        <!-- =================== -->
+        <div id="miscProjects" class="mb-5">
             <h3>Misc Projects</h3>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <div class="card project-card"
-                         data-toggle="modal" data-target="#projectModal"
                          data-title="FDwarf 1"
-                         data-image="Thumbnails/Foxhound.png"
-                         data-description="A propaganda poster I made for my friends."
-                         style="cursor:pointer;">
-                        <img src="Thumbnails/Foxhound.png" class="card-img-top" alt="Foxhound" />
-                        <div class="overlay">A propaganda poster I made for my friends.</div>
+                         data-images='["Thumbnails/Foxhound.png"]'
+                         data-description="A propaganda poster I made for my friends.">
+                        <img src="Thumbnails/Foxhound.png" class="card-img-top" alt="FDwarf 1" />
+                        <div class="overlay">FDwarf 1</div>
                     </div>
                 </div>
             </div>
@@ -154,69 +180,108 @@
 
     </main>
 
-    <!-- Bootstrap JS for Modal -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- Custom JS -->
-    <script>
-        $(document).ready(function () {
-            // GIF hover effect for .video-preview cards
-            $('.video-preview').hover(
-                function () {
-                    var gifSrc = $(this).data('gif');
-                    if (gifSrc) {
-                        $(this).find('img').attr('src', gifSrc);
-                    }
-                },
-                function () {
-                    var imageSrc = $(this).data('image');
-                    if (imageSrc) {
-                        $(this).find('img').attr('src', imageSrc);
-                    }
-                }
-            );
-
-            // Update and show modal on card click
-            $('.project-card').click(function () {
-                var title = $(this).data('title');
-                var image = $(this).data('image');
-                var description = $(this).data('description');
-                var isVideoPreview = $(this).hasClass('video-preview');
-                var gif = $(this).data('gif');
-
-                $('#projectModalLabel').text(title);
-                $('#modalDescription').text(description);
-
-                if (isVideoPreview && gif) {
-                    $('#modalImage').attr('src', gif).attr('alt', title).show();
-                } else {
-                    $('#modalImage').attr('src', image).attr('alt', title).show();
-                }
-
-                $('#projectModal').modal('show');
-            });
-        });
-    </script>
-
-    <!-- Modal -->
+    <!-- =================== -->
+    <!-- Modal HTML -->
+    <!-- =================== -->
     <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header d-flex justify-content-between align-items-center">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content p-3">
+                <div class="modal-header">
                     <h5 class="modal-title" id="projectModalLabel"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size:2rem;">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body text-center">
-                    <img src="" id="modalImage" class="img-fluid" alt="Project Image" />
+                <div class="modal-body">
+
+                    <!-- Carousel -->
+                    <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                        <div class="carousel-inner" id="carouselInner"></div>
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div id="carouselThumbnails" class="d-flex justify-content-center mt-3 flex-wrap gap-2"></div>
+
+                    <!-- Description & link -->
                     <p id="modalDescription" class="mt-3"></p>
+                    <div id="modalLinkContainer"></div>
+
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- =================== -->
+    <!-- JS Dependencies -->
+    <!-- =================== -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- =================== -->
+    <!-- Custom JS -->
+    <!-- =================== -->
+    <script>
+        $(document).ready(function () {
+
+            const carouselInterval = 10000; // 10 seconds
+
+            $('.video-preview').hover(
+                function () {
+                    const gif = $(this).data('gif');
+                    if (gif) $(this).find('img').attr('src', gif);
+                },
+                function () {
+                    const img = $(this).data('image');
+                    if (img) $(this).find('img').attr('src', img);
+                }
+            );
+
+            $('.project-card').click(function () {
+                const title = $(this).data('title');
+                const description = $(this).data('description');
+                const images = $(this).data('images') || [$(this).data('image')];
+                const link = $(this).data('link');
+
+                $('#projectModalLabel').text(title);
+                $('#modalDescription').text(description);
+
+                $('#carouselInner').empty();
+                $('#carouselThumbnails').empty();
+                $('#modalLinkContainer').empty();
+
+                // Populate carousel and thumbnails
+                images.forEach((img, i) => {
+                    const activeClass = i === 0 ? 'active' : '';
+                    $('#carouselInner').append(`
+                    <div class="carousel-item ${activeClass}">
+                        <img class="d-block w-100" src="${img}" alt="${title} image ${i + 1}">
+                    </div>
+                `);
+
+                    $('#carouselThumbnails').append(`
+                    <img src="${img}" class="${i === 0 ? 'active' : ''}" data-slide-to="${i}">
+                `);
+                });
+
+                // Handle thumbnail clicks
+                $('#carouselThumbnails img').click(function () {
+                    const index = $(this).data('slide-to');
+                    $('#projectCarousel').carousel(index);
+                    $('#carouselThumbnails img').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                if (link) {
+                    $('<a id="modalLink" href="' + link + '" target="_blank">View Project</a>').appendTo('#modalLinkContainer');
+                }
+
+                $('#projectModal').modal('show');
+
+                $('#projectCarousel').carousel({
+                    interval: carouselInterval
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
