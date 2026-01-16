@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\styles.css||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:styles.css||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "styles.css",
-              "DocumentMoniker": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\styles.css",
-              "RelativeDocumentMoniker": "styles.css",
-              "ToolTip": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\styles.css",
-              "RelativeToolTip": "styles.css",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAwwHMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-04T06:27:05.567Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-02T11:01:46.636Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAuwNUAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-04T06:17:03.941Z",
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\styles.css",
+              "RelativeDocumentMoniker": "styles.css",
+              "ToolTip": "C:\\Users\\DarkuAdmin\\Desktop\\Website\\Darkuu.github.io\\styles.css",
+              "RelativeToolTip": "styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-02T11:02:25.748Z",
               "EditorCaption": ""
             }
           ]
