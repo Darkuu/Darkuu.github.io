@@ -4,7 +4,7 @@
 const PROJECTS = [
     {
         id: "00",
-        title: "Makoober",
+        title: "Makeoober",
         role: "Programming, Game Design, Playtest, Organisation",
         stack: "Unity · C# · Miro",
         status: "SHIPPED — ACTIVE",
@@ -83,7 +83,7 @@ const PROJECTS = [
         title: "VR Escape Room",
         role: "Solo — final project for VR coursework",
         stack: "Unity · VR (OpenXR)",
-        status: "GRADED — 10/10",
+        status: "PROTOTYPE - SHIPPED",
         metric: "First full VR project outside small tests",
         description: "A VR escape room built as my final project for VR lectures — my first complete VR build beyond small experiments. I'm like the result, but I can already see what I'd rebuild differently with what I know now, i've learnt a lot since creating it.",
         media: [
@@ -162,11 +162,6 @@ const PROJECTS = [
 
 // ============================================
 // LIVE PAGE VIEW COUNTER
-// Uses Abacus (abacus.jasoncameron.dev) — a free, CORS-enabled hit
-// counter with no signup required. The namespace is your site's own
-// hostname, so this "just works" once you publish to GitHub Pages —
-// nothing to configure. Locally (file://) it will fail silently and
-// show "—", which is expected since there's no real hostname yet.
 // ============================================
 async function trackPageView() {
     const el = document.getElementById("pageViews");
@@ -228,13 +223,10 @@ function renderDossiers() {
     </article>
   `).join("");
 
-    // Default volume — browsers don't support a volume HTML attribute,
-    // so it has to be set on the element itself.
     container.querySelectorAll("video").forEach(video => {
         video.volume = 0.5;
     });
 
-    // thumbnail click handling
     container.querySelectorAll(".thumb").forEach(btn => {
         btn.addEventListener("click", () => {
             const pIdx = btn.dataset.project;
