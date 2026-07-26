@@ -2,353 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Rihards Zorgis Portfolio</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rihards Zorgis — Game Design & Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
-
-    <style>
-        #carouselThumbnails img {
-            width: 80px;
-            height: 60px;
-            cursor: pointer;
-            margin: 4px;
-            object-fit: cover;
-            border: 2px solid transparent;
-            transition: border 0.2s;
-        }
-
-            #carouselThumbnails img.active {
-                border-color: var(--color);
-            }
-
-        #projectCarousel .carousel-item img,
-        #projectCarousel .carousel-item video {
-            width: 100%;
-            max-height: 70vh;
-            object-fit: contain;
-        }
-
-        #modalLinkContainer .btn {
-            border-color: var(--color);
-            color: var(--color);
-        }
-
-            #modalLinkContainer .btn:hover {
-                background: var(--color);
-                color: #fff;
-            }
-
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 5px;
-            color: white;
-            background: rgba(0,0,0,0.6);
-            text-align: center;
-        }
-
-        .project-card {
-            position: relative;
-            cursor: pointer;
-        }
-    </style>
 </head>
-
 <body>
 
-    <header class="text-center mt-4">
-        <h1><span>Rihards Zorgis</span><br><small>An insight into me</small></h1>
-        <p class="mt-2" >
-            I'm a passionate Game Design and Graphics student focused on game development.<br>
-            I also dabble in data organization, Blender modeling, and game modification.<br>
-            <strong>Click on any card to see more information!</strong>
-        </p>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <header id="hud">
+        <div class="hud-id">RZ<span>_PORTFOLIO</span></div>
+        <nav class="hud-nav">
+            <a href="#work">WORK</a>
+            <a href="#specs">SPECS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="hud-status"><span class="dot"></span>ONLINE</div>
     </header>
 
-    <main class="container mt-4">
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-inner">
+            <p class="terminal-line" id="bootline">&gt; loading profile<span class="cursor">_</span></p>
+            <h1 class="hero-title">RIHARDS<br>ZORGIS</h1>
+            <p class="hero-role">GAME DESIGN &amp; DEVELOPMENT TOOLS, SYSTEMS, LUA/C#/BLENDER</p>
+            <p class="hero-desc">Ilike to build the parts of games most players never think about. Below you can see some of my previous project and tests.</p>
+            <a href="#work" class="btn-primary">OPEN PROJECT FILES ↓</a>
+        </div>
+        <div class="hero-readout">
+            <div class="readout-row"><span>PAGE VIEWS</span><span id="pageViews">…</span></div>
+            <div class="readout-row"><span>PROJECTS</span><span id="caseCount">…</span></div>
+            <div class="readout-row"><span>STATUS</span><span class="ok">OPEN FOR WORK</span></div>
+        </div>
+    </section>
 
-        <!-- Highlighted Project -->
-        <div class="row mb-5 align-items-center">
-            <div class="col-md-4">
-                <div class="card project-card"
-                     data-title="[LVS] Tau Vehicles - Warhammer 40,000"
-                     data-media='[
-                    {"type":"image","src":"Thumbnails/GmodTau.png"},
-                    {"type":"image","src":"Thumbnails/GmodTau3.png"},
-                    {"type":"image","src":"Thumbnails/GmodTau2.png"},
-                    {"type":"video","src":"Videos/TauVehicle.mp4"}
-                 ]'
-                     data-description="This is my most popular project to date. Currently 5,000+ Unique Visitors, 1,400+ Subscribers, and 250 Favourites and currently used in a bunch of Roleplay servers. It's fully functional Warhammer 40k weapons within Garry's Mod created in Lua, using code based off Luna's Star Wars vehicles as a learning base."
-                     data-links='[
-                    {"label":"Steam Workshop","url":"https://steamcommunity.com/sharedfiles/filedetails/?id=3513769630"},
-                    {"label":"GitHub","url":"https://github.com/Darkuu/GMOD-LVS-TauVehicles"}
-                 ]'>
-                    <img src="Thumbnails/LVSTau.png" class="card-img-top" alt="Tau Steam Workshop" />
-                    <div class="overlay">[LVS] Tau Vehicles - Warhammer 40,000</div>
-                </div>
+    <!-- WORK -->
+    <section id="work" class="work">
+        <h2 class="section-label">// PROJECT FILES</h2>
+        <div id="dossier-list"></div>
+    </section>
+
+    <!-- SPECS / ABOUT -->
+    <section id="specs" class="specs">
+        <h2 class="section-label">// SYSTEM SPECIFICATIONS</h2>
+        <div class="specs-grid">
+            <div class="specs-panel">
+                <h3>PREFERENCES</h3>
+                <ul>
+                    <li><span>Engine Work</span><div class="bar"><div style="width:90%"></div></div></li>
+                    <li><span>Programming</span><div class="bar"><div style="width:80%"></div></div></li>
+                    <li><span>Game Design</span><div class="bar"><div style="width:60%"></div></div></li>
+                    <li><span>Documentation</span><div class="bar"><div style="width:55%"></div></div></li>
+                    <li><span>Misc</span><div class="bar"><div style="width:50%"></div></div></li>
+                </ul>
             </div>
-
-            <div class="col-md-8">
-                <h3>[LVS] Tau Vehicles - Warhammer 40,000</h3>
-                <p>My most popular project, a Garry's Mod addon. A challenge project to refresh my LUA knowledge and model exporting workflows.</p>
+            <div class="specs-panel">
+                <h3>TOOLS</h3>
+                <ul class="tag-list">
+                    <li>Unity</li>
+                    <li>Blender</li>
+                    <li>Source Engine</li>
+                    <li>Miro</li>
+                    <li>Google Apps Script</li>
+                    <li>Git / GitHub</li>
+                    <li>HTML / CSS</li>
+                </ul>
+            </div>
+            <div class="specs-panel wide">
+                <h3>EXPERIENCE LOG</h3>
+                <ul class="log-list">
+                    <li><span class="log-tag">DEV</span> ~1 year developing for a Garry's Mod Warhammer 40K roleplay community — gamemode setup, content modification to fit server needs.</li>
+                    <li><span class="log-tag">LEAD</span> Managed a 75+ person server on a separate Garry's Mod server, ran events, built and maintained management systems.</li>
+                    <li><span class="log-tag">DATA</span> Designed and maintained automated roster systems (Google Sheets + Apps Script) for a long-running community server - sorting, timestamping, reporting. </li>
+                    <li><span class="log-tag">INTERNSHIP</span> Riga Technical Univeristy - Creating a website with automatic tracking of technology and tool usage, availability and statistics. </li>
+                    <li><span class="log-tag">INTERNSHIP</span> FTone - Creating a website for a small company that takes photo shoots. </li>
+                    <li><span class="log-tag">INTERNSHIP</span> Colourless Creative - Engine Developer. Assisting the main programmer and developers in creating the game, fixing bugs etc. </li>
+                </ul>
             </div>
         </div>
+    </section>
 
-        <!-- Game Projects -->
-        <div class="mb-5">
-            <h3>Game Projects</h3>
-            <div class="row">
-
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Webbed Valley"
-                         data-media='[
-                        {"type":"image","src":"Thumbnails/SpiderGame01.png"},
-                        {"type":"image","src":"Thumbnails/SpiderGame02.png"},
-                        {"type":"image","src":"Thumbnails/SpiderGame03.png"},
-                        {"type":"video","src":"Videos/SpiderMeadow.mp4"}
-                     ]'
-                         data-description="A game created by a two-person team. I was responsible for programming, engine work, playtesting, and bug fixing. In the game, you play as a spider who must farm bugs, explore the world, and uncover the truth about the evil government that banished you and your kind."
-                         data-links='[
-                        {"label":"GitHub","url":"https://github.com/Darkuu/Project-Spider"},
-                        {"label":"Itch.io","url":"https://daarku.itch.io/spider-meadow"}
-                     ]'>
-                        <img src="Thumbnails/SpiderMeadow.png" class="card-img-top">
-                        <div class="overlay">Spider Meadow</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Noise Game"
-                         data-media='[
-                        {"type":"image","src":"Thumbnails/LandGenerator1.png"},
-                        {"type":"image","src":"Thumbnails/LandGenerator2.png"},
-                        {"type":"image","src":"Thumbnails/LandGenerator3.png"}
-                     ]'
-                         data-description="A very basic noise terrain generator, one of my first projects."
-                         data-links='[
-                        {"label":"GitHub","url":"https://github.com/Darkuu/LandGenerator"},
-                        {"label":"Play it!","url":"https://play.unity.com/en/games/02df1b75-df99-4be6-9cad-80be371dbd2c/land-generator-prototype"}
-                     ]'>
-                        <img src="Thumbnails/NoiseGame.jpg" class="card-img-top">
-                        <div class="overlay">Noise Map Generator</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Escape Room VR"
-                         data-media='[
-                        {"type":"image","src":"Thumbnails/VREscapeRoom.png"},
-                        {"type":"video","src":"Videos/EscapeRoom.mp4"}
-                     ]'
-                         data-description="VR escape room created as my final project for VR lectures. This was my first full VR project outside of small tests, and it received a 10/10 grade. While I’m proud of the result, there are many improvements I could make and mistakes I learned from. If I were to re-create it today, it would be very different based on what I’ve learned since then."
-                         data-links='[
-                        {"label":"GitHub","url":"https://github.com/Darkuu/EKA-Escape_Room"}
-                     ]'>
-                        <img src="Thumbnails/VREscapeRoom.png" class="card-img-top">
-                        <div class="overlay">VR Escape Room</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Art Class"
-                         data-media='[
-                        {"type":"image","src":"Thumbnails/ArtGame0.png"},
-                        {"type":"image","src":"Thumbnails/ArtGame1.png"},
-                        {"type":"image","src":"Thumbnails/ArtGame2.png"},
-                        {"type":"video","src":"Videos/ArtGame.mp4"}
-                     ]'
-                         data-description="A game created (by a team of four) for children. I was responsible for programming, engine work, playtesting. The gameplay involves grading art based on learning its style, and the project was completed as part of my studies."
-                         data-links='[
-                        {"label":"GitHub","url":"https://github.com/Darkuu/EKA-Kompozicija"}
-                     ]'>
-                        <img src="Thumbnails/ArtGame.png" class="card-img-top">
-                        <div class="overlay">Art Game</div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2 class="section-label">// CONTACT</h2>
+        <p class="contact-prompt">&gt; email -  rihardszorgis@gmail.com \  Discord - Daarku<span class="cursor">_</span></p>
+        <div class="contact-links">
+            <a href="https://github.com/Darkuu" target="_blank">GITHUB</a>
+            <a href="mailto:Rrihardszorgis@gmail.com" target="_blank">EMAIL</a>
+            <a href="https://www.linkedin.com/in/rihards-zor%C4%A3is-0a14a5204/" target="_blank">LINKEDIN</a>
         </div>
+    </section>
 
-        <!-- Misc Projects -->
-        <div class="mb-5">
-            <h3>Misc Projects</h3>
-            <div class="row">
+    <footer>
+        <p>RIHARDS ZORGIS — GAME DESIGN &amp; GRAPHICS © 2026</p>
+    </footer>
 
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Blender Characters"
-                         data-media='[
-                        {"type":"image","src":"Thumbnails/Character01.png"},
-                        {"type":"image","src":"Thumbnails/Character02.png"},
-                        {"type":"gif","src":"Thumbnails/Character03.png"}
-                     ]'
-                         data-description="A small collection of charactersthat I created & rigged for my Character Design classes">
-                        <img src="Thumbnails/Character01.png" class="card-img-top">
-                        <div class="overlay">Characters</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Blender Statue"
-                         data-media='[
-                        {"type":"image","src":"Thumbnails/TauThumb.png"},
-                        {"type":"gif","src":"Thumbnails/TauGif.gif"}
-                     ]'
-                         data-description="A statue created for Blender lessons, fully created and textured by me. Inspired by Warhammer 40K T'au battlesuits.">
-                        <img src="Thumbnails/TauThumb.png" class="card-img-top">
-                        <div class="overlay">Statue</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card"
-                         data-title="Google Sheets"
-                         data-media='[
-                                        {"type":"image","src":"Thumbnails/Excel.png"},
-                                      {"type":"image","src":"Thumbnails/Excel2.png"},
-                                      {"type":"image","src":"Thumbnails/Excel3.png"}
-     ]'
-                         data-description="A small insight into databases, also called ``rosters`` that I managed for a long-running server. These rosters are automated using Google Apps Scripts to sort data, add timestamps, and streamline management, at the moment i cannot acess the scripts due to google not letting me into apps scripts.">
-                        <img src="Thumbnails/excellogo.png" class="card-img-top">
-                        <div class="overlay">Excel / Google Sheets</div>
-                    </div>
-                </div>
-
-                <h4>More about me:</h4>
-                I've studied programming, so i tend to dabble into it. I enjoy it until it no longer works. </br>
-                I'm familiar with MySqL, HTML, CSS, Javascript.</br>
-                Proficient in C#, Python.</br>
-                Worked as a developer for a community for roughly about a year, developing for a Garry's Warhammer 40K Roleplay server. Such as setting up the gamemode or modifying so content suits it</br>
-                Managed  100+ people with a team, hosting events, managing and creating systems on another Garry's mod server.
-
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content p-3">
-
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projectModalLabel"></h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body">
-                    <div id="projectCarousel" class="carousel slide">
-                        <div class="carousel-inner" id="carouselInner"></div>
-                    </div>
-
-                    <div id="carouselThumbnails" class="d-flex justify-content-center flex-wrap mt-3"></div>
-
-                    <p id="modalDescription" class="mt-3"></p>
-                    <div id="modalLinkContainer" class="mt-2"></div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-
-            $('.project-card').click(function () {
-
-                const title = $(this).data('title');
-                const description = $(this).data('description');
-                const media = $(this).data('media') || [];
-                const links = $(this).data('links') || [];
-
-                $('#projectModalLabel').text(title);
-                $('#modalDescription').text(description);
-                $('#carouselInner').empty();
-                $('#carouselThumbnails').empty();
-                $('#modalLinkContainer').empty();
-
-                media.forEach((item, i) => {
-                    const active = i === 0 ? 'active' : '';
-
-                    if (item.type === 'image' || item.type === 'gif') {
-                        $('#carouselInner').append(`
-                        <div class="carousel-item ${active}">
-                            <img src="${item.src}" class="d-block w-100">
-                        </div>
-                    `);
-
-                        $('#carouselThumbnails').append(`
-                        <img src="${item.src}" class="${active}" data-slide-to="${i}">
-                    `);
-                    }
-
-                    if (item.type === 'video') {
-                        $('#carouselInner').append(`
-                        <div class="carousel-item ${active}">
-                            <video controls class="d-block w-100">
-                                <source src="${item.src}" type="video/mp4">
-                            </video>
-                        </div>
-                    `);
-
-                        $('#carouselThumbnails').append(`
-                        <img src="Thumbnails/video_thumb.png" class="${active}" data-slide-to="${i}">
-                    `);
-                    }
-                });
-
-                // Thumbnails click
-                $('#carouselThumbnails img').click(function () {
-                    const index = $(this).data('slide-to');
-                    $('#projectCarousel').carousel(index);
-                    $('#carouselThumbnails img').removeClass('active');
-                    $(this).addClass('active');
-                });
-
-                // Links
-                links.forEach(link => {
-                    $('<a class="btn btn-outline-primary mr-2 mt-2" target="_blank"></a>')
-                        .text(link.label)
-                        .attr('href', link.url)
-                        .appendTo('#modalLinkContainer');
-                });
-
-                $('#projectCarousel').carousel({ interval: 10000 });
-                $('#projectModal').modal('show');
-            });
-
-            // Pause videos when sliding
-            $('#projectCarousel').on('slide.bs.carousel', function () {
-                $(this).find('video').each(function () {
-                    this.pause();
-                });
-            });
-
-            // Optional: Restart GIFs on slide
-            $('#projectCarousel').on('slid.bs.carousel', function () {
-                $(this).find('.carousel-item.active img').each(function () {
-                    const src = $(this).attr('src');
-                    if (src.endsWith('.gif')) {
-                        $(this).attr('src', src); // restart GIF
-                    }
-                });
-            });
-
-        });
-    </script>
-
+    <script src="./script.js"></script>
 </body>
 </html>
