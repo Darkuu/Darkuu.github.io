@@ -7,7 +7,7 @@ const PROJECTS = [
         title: "Makeoober",
         role: "Lead Programmer (4-person team)",
         stack: "Unity · C# · OpenXR",
-        status: "Released to Makeoober",
+        status: "Released to The Rookies",
         metric: "Finalist — The Rookies",
         description: "My most detailed project to date. Makeoober is an XR makeover game created for a health and beauty retail store, where players become an intergalactic makeup artist helping alien Goobers from different planets. I contributed to programming, game design, organisation, and playtesting, helping develop interactive systems and refine the overall experience. The project gave our team valuable experience developing XR gameplay while adapting the visual design and interactions to match a commercial brand identity. Developed by a 4-person team, with final production completed by 3 members.",
         media: [
