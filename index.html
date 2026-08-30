@@ -1,107 +1,534 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rihards Zorgis — Game Design & Development</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Rihards Zorgis — Game Programmer and Developer specialising in Unity, C#, OpenXR, Lua, gameplay systems and technical development.">
+
+    <meta name="keywords"
+          content="Rihards Zorgis, game programmer, game developer, Unity, C#, OpenXR, Lua, Blender, gameplay programmer, XR developer">
+
+    <meta name="author" content="Rihards Zorgis">
+
+    <meta name="theme-color" content="#0A0A0C">
+
+    <title>Rihards Zorgis — Game Programmer & Developer</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
+    <!-- Background effects -->
     <div class="scanlines" aria-hidden="true"></div>
     <div class="grid-overlay" aria-hidden="true"></div>
 
-    <!-- NAV -->
+
+    <!-- ============================================
+         NAVIGATION
+    ============================================= -->
+
     <header id="hud">
-        <div class="hud-id">RZ<span>_PORTFOLIO</span></div>
-        <nav class="hud-nav">
+
+        <a href="#top" class="hud-id" aria-label="Return to top">
+            RZ<span>_PORTFOLIO</span>
+        </a>
+
+        <nav class="hud-nav" aria-label="Main navigation">
             <a href="#work">WORK</a>
-            <a href="#specs">SPECS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#experience">EXPERIENCE</a>
             <a href="#contact">CONTACT</a>
         </nav>
-        <div class="hud-status"><span class="dot"></span>ONLINE</div>
+
+        <div class="hud-status">
+            <span class="dot" aria-hidden="true"></span>
+            <span>OPEN FOR WORK</span>
+        </div>
+
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-        <div class="hero-inner">
-            <p class="terminal-line" id="bootline">&gt; loading profile<span class="cursor">_</span></p>
-            <h1 class="hero-title">RIHARDS<br>ZORGIS</h1>
-            <p class="hero-role">GAME DESIGN &amp; DEVELOPMENT TOOLS, SYSTEMS, LUA/C#/BLENDER</p>
-            <p class="hero-desc">I like to build the parts of games most players never think about. Below you can see some of my previous project and tests.</p>
-            <a href="#work" class="btn-primary">OPEN PROJECT FILES ↓</a>
-        </div>
-        <div class="hero-readout">
-            <div class="readout-row"><span>PAGE VIEWS</span><span id="pageViews">…</span></div>
-            <div class="readout-row"><span>PROJECTS</span><span id="caseCount">…</span></div>
-            <div class="readout-row"><span>STATUS</span><span class="ok">OPEN FOR WORK</span></div>
-        </div>
-    </section>
 
-    <!-- WORK -->
-    <section id="work" class="work">
-        <h2 class="section-label">// PROJECT FILES</h2>
-        <div id="dossier-list"></div>
-    </section>
+    <main>
 
-    <!-- SPECS / ABOUT -->
-    <section id="specs" class="specs">
-        <h2 class="section-label">// SYSTEM SPECIFICATIONS</h2>
-        <div class="specs-grid">
-            <div class="specs-panel">
-                <h3>PREFERENCES</h3>
-                <ul>
-                    <li><span>Engine Work</span><div class="bar"><div style="width:90%"></div></div></li>
-                    <li><span>Programming</span><div class="bar"><div style="width:80%"></div></div></li>
-                    <li><span>Game Design</span><div class="bar"><div style="width:60%"></div></div></li>
-                    <li><span>Documentation</span><div class="bar"><div style="width:55%"></div></div></li>
-                    <li><span>Misc</span><div class="bar"><div style="width:50%"></div></div></li>
-                </ul>
-            </div>
-            <div class="specs-panel">
-                <h3>TOOLS</h3>
-                <ul class="tag-list">
-                    <li>Unity</li>
-                    <li>Blender</li>
-                    <li>Source Engine</li>
-                    <li>Miro</li>
-                    <li>Google Apps Script</li>
-                    <li>Git / GitHub</li>
-                    <li>HTML / CSS</li>
-                </ul>
-            </div>
-            <div class="specs-panel wide">
-                <h3>EXPERIENCE LOG</h3>
-                <ul class="log-list">
-                    <li><span class="log-tag">DEV</span> ~1 year developing for a Garry's Mod Warhammer 40K roleplay community — gamemode setup, content modification to fit server needs.</li>
-                    <li><span class="log-tag">LEAD</span> Managed a 75+ person server on a separate Garry's Mod server, ran events, built and maintained management systems.</li>
-                    <li><span class="log-tag">DATA</span> Designed and maintained automated roster systems (Google Sheets + Apps Script) for a long-running community server - sorting, timestamping, reporting. </li>
-                    <li><span class="log-tag">INTERNSHIP</span> Riga Technical Univeristy - Creating a website with automatic tracking of technology and tool usage, availability and statistics. </li>
-                    <li><span class="log-tag">INTERNSHIP</span> FTone - Creating a website for a small company that takes photo shoots. </li>
-                    <li><span class="log-tag">INTERNSHIP</span> Colourless Creative - Engine Developer. Assisting the main programmer and developers in creating the game, fixing bugs etc. </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        <!-- ============================================
+             HERO
+        ============================================= -->
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <h2 class="section-label">// CONTACT</h2>
-        <p class="contact-prompt">&gt; email -  rihardszorgis@gmail.com \  Discord - Daarku<span class="cursor">_</span></p>
-        <div class="contact-links">
-            <a href="https://github.com/Darkuu" target="_blank">GITHUB</a>
-            <a href="mailto:Rrihardszorgis@gmail.com" target="_blank">EMAIL</a>
-            <a href="https://www.linkedin.com/in/rihards-zor%C4%A3is-0a14a5204/" target="_blank">LINKEDIN</a>
-        </div>
-    </section>
+        <section class="hero" id="top">
+
+            <div class="hero-inner">
+
+                <p class="terminal-line" id="bootline" aria-live="polite">
+                    &gt; loading profile<span class="cursor">_</span>
+                </p>
+
+                <p class="hero-kicker">
+                    GAME PROGRAMMER · DEVELOPER · TECHNICAL CREATIVE
+                </p>
+
+                <h1 class="hero-title">
+                    RIHARDS<br>ZORGIS
+                </h1>
+
+                <p class="hero-role">
+                    UNITY · C# · OPENXR · LUA · BLENDER
+                </p>
+
+                <p class="hero-desc">
+                    Game programmer and developer focused on gameplay systems,
+                    interactive experiences, tools, and technical problem solving.
+                    I enjoy building the systems behind games and turning ideas
+                    into playable experiences.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#work" class="btn-primary">
+                        VIEW PROJECTS ↓
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <aside class="hero-readout" aria-label="Portfolio statistics">
+
+                <div class="readout-header">
+                    SYSTEM READOUT
+                </div>
+
+                <div class="readout-row">
+                    <span>PROJECTS</span>
+                    <span id="caseCount">…</span>
+                </div>
+
+                <div class="readout-row">
+                    <span>PAGE VIEWS</span>
+                    <span id="pageViews">…</span>
+                </div>
+
+                <div class="readout-row">
+                    <span>AVAILABILITY</span>
+                    <span class="ok">OPEN FOR WORK</span>
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ============================================
+             QUICK PROFILE
+        ============================================= -->
+
+        <section class="profile-strip" aria-label="Professional summary">
+
+            <div>
+                <span class="profile-label">SPECIALISATION</span>
+                <strong>Gameplay & Systems Programming</strong>
+            </div>
+
+            <div>
+                <span class="profile-label">PRIMARY ENGINE</span>
+                <strong>Unity</strong>
+            </div>
+
+            <div>
+                <span class="profile-label">LANGUAGES</span>
+                <strong>C# · Lua · SQL</strong>
+            </div>
+
+            <div>
+                <span class="profile-label">EXPERIENCE</span>
+                <strong>VR/XR · 3D · 2D</strong>
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             WORK
+        ============================================= -->
+
+        <section id="work" class="work">
+
+            <h2 class="section-label">
+                // PROJECT FILES
+            </h2>
+
+            <div class="section-intro">
+
+                <h2>Selected Work</h2>
+
+                <p>
+                    A selection of university, commercial, independent and
+                    experimental projects demonstrating my experience with
+                    gameplay programming, XR, systems development and technical
+                    problem solving.
+                </p>
+
+            </div>
+
+            <div id="dossier-list"></div>
+
+        </section>
+
+
+        <!-- ============================================
+             ABOUT
+        ============================================= -->
+
+        <section id="about" class="specs">
+
+            <h2 class="section-label">
+                // ABOUT / SYSTEM SPECIFICATIONS
+            </h2>
+
+            <div class="about-grid">
+
+                <div class="specs-panel about-main">
+
+                    <h3>PROFILE</h3>
+
+                    <p>
+                        I am a game development student and programmer with
+                        practical experience building gameplay systems,
+                        interactive experiences and development tools.
+                    </p>
+
+                    <p>
+                        My main focus is programming, particularly gameplay
+                        systems and engine-side development in Unity and C#.
+                        I also have experience with Lua and the Source engine,
+                        OpenXR development, Blender, web technologies and
+                        automation.
+                    </p>
+
+                    <p>
+                        I have worked both independently and as part of small
+                        development teams, including commercial XR development
+                        and university projects. I enjoy understanding how
+                        systems work, solving technical problems and turning
+                        designs into reliable interactive experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="specs-panel">
+
+                    <h3>CORE SKILLS</h3>
+
+                    <ul class="skill-list">
+
+                        <li>
+                            <span>Gameplay Programming</span>
+                            <strong>★★★★★</strong>
+                        </li>
+
+                        <li>
+                            <span>Unity / C#</span>
+                            <strong>★★★★★</strong>
+                        </li>
+
+                        <li>
+                            <span>XR / OpenXR</span>
+                            <strong>★★★★☆</strong>
+                        </li>
+
+                        <li>
+                            <span>Systems Development</span>
+                            <strong>★★★★☆</strong>
+                        </li>
+
+                        <li>
+                            <span>Lua / Source</span>
+                            <strong>★★★★☆</strong>
+                        </li>
+
+                        <li>
+                            <span>Blender / 3D</span>
+                            <strong>★★★☆☆</strong>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="specs-panel">
+
+                    <h3>TOOLS</h3>
+
+                    <ul class="tag-list">
+
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>OpenXR</li>
+                        <li>Lua</li>
+                        <li>Garry's Mod</li>
+                        <li>Source Engine</li>
+                        <li>Blender</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Google Apps Script</li>
+                        <li>SQL</li>
+                        <li>Miro</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             EXPERIENCE
+        ============================================= -->
+
+        <section id="experience" class="experience">
+
+            <h2 class="section-label">
+                // EXPERIENCE LOG
+            </h2>
+
+            <div class="experience-grid">
+
+                <article class="experience-item">
+
+                    <div class="experience-meta">
+                        <span class="log-tag">INTERNSHIP</span>
+                        <span>COLOURLESS CREATIVE</span>
+                    </div>
+
+                    <h3>Programming / Engine Development</h3>
+
+                    <p>
+                        Assisted with development of an interactive XR
+                        experience, implementing features, fixing production
+                        bugs, supporting playtesting and improving reliability
+                        for a public exhibition.
+                    </p>
+
+                    <div class="experience-stack">
+                        Unity · C# · OpenXR
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-meta">
+                        <span class="log-tag">INTERNSHIP</span>
+                        <span>RIGA TECHNICAL UNIVERSITY</span>
+                    </div>
+
+                    <h3>Web Development & Data Tools</h3>
+
+                    <p>
+                        Worked on a website focused on tracking technology and
+                        tool usage, availability and related statistics.
+                    </p>
+
+                    <div class="experience-stack">
+                        Web · Data · Automation
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-meta">
+                        <span class="log-tag">INTERNSHIP</span>
+                        <span>FTONE</span>
+                    </div>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Developed a website for a small photography business,
+                        gaining practical experience working with a real
+                        client and delivering a functional web presence.
+                    </p>
+
+                    <div class="experience-stack">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-meta">
+                        <span class="log-tag">LEAD</span>
+                        <span>COMMUNITY DEVELOPMENT</span>
+                    </div>
+
+                    <h3>Server & Community Management</h3>
+
+                    <p>
+                        Managed a 75+ person community environment, organised
+                        events and maintained management systems while also
+                        contributing to technical development.
+                    </p>
+
+                    <div class="experience-stack">
+                        Leadership · Organisation · Systems
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-meta">
+                        <span class="log-tag">DEV</span>
+                        <span>GARRY'S MOD</span>
+                    </div>
+
+                    <h3>Gameplay & Systems Development</h3>
+
+                    <p>
+                        Approximately one year of development for a
+                        Warhammer 40,000 roleplay community, including
+                        gamemode setup, Lua development, content modification
+                        and server-specific systems.
+                    </p>
+
+                    <div class="experience-stack">
+                        Lua · Source Engine · Garry's Mod
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-meta">
+                        <span class="log-tag">DATA</span>
+                        <span>COMMUNITY AUTOMATION</span>
+                    </div>
+
+                    <h3>Roster & Database Automation</h3>
+
+                    <p>
+                        Designed and maintained automated roster and
+                        administration systems using Google Sheets and Apps
+                        Script, reducing repetitive manual work through
+                        sorting, timestamping and reporting tools.
+                    </p>
+
+                    <div class="experience-stack">
+                        Google Sheets · Apps Script · MySQL
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             CONTACT
+        ============================================= -->
+
+        <section id="contact" class="contact">
+
+            <h2 class="section-label">
+                // CONTACT
+            </h2>
+
+            <div class="contact-content">
+
+                <div>
+
+                    <p class="contact-prompt">
+                        &gt; connection available<span class="cursor">_</span>
+                    </p>
+
+                    <h2>
+                        Interested in working together?
+                    </h2>
+
+                    <p class="contact-description">
+                        I am currently open to game development,
+                        gameplay programming, technical development,
+                        XR and related opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:rihardszorgis@gmail.com"
+                       class="contact-link-primary">
+                        EMAIL
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://github.com/Darkuu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GITHUB
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/rihards-zor%C4%A3is-0a14a5204/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LINKEDIN
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
 
     <footer>
-        <p>RIHARDS ZORGIS — GAME DESIGN &amp; GRAPHICS © 2026</p>
+
+        <p>
+            RIHARDS ZORGIS — GAME PROGRAMMER & DEVELOPER
+        </p>
+
+        <p>
+            © 2026 · BUILT WITH HTML / CSS / JAVASCRIPT
+        </p>
+
     </footer>
 
+
     <script src="./script.js"></script>
+
 </body>
 </html>
