@@ -3,6 +3,11 @@
 // ============================================
 
 const PROJECTS = [
+
+    // ========================================
+    // 00 — MAKEOOBER
+    // ========================================
+
     {
         id: "00",
         title: "Makeoober",
@@ -11,12 +16,11 @@ const PROJECTS = [
         role: "Lead Programmer (4-person team)",
         stack: "Unity · C# · OpenXR",
 
-        status: "Finalist & Highly Commended — The Rookies",
+        status: "FINALIST",
         metric: "Finalist & Highly Commended — The Rookies",
 
         awards: [
-            "FINALIST — THE ROOKIES",
-            "HIGHLY COMMENDED — THE ROOKIES"
+            "FINALIST & HIGHLY COMMENDED THE ROOKIES 2026",
         ],
 
         description:
@@ -45,6 +49,11 @@ const PROJECTS = [
         ]
     },
 
+
+    // ========================================
+    // 01 — BECOMING
+    // ========================================
+
     {
         id: "01",
         title: "Becoming",
@@ -61,7 +70,7 @@ const PROJECTS = [
         media: [
             {
                 type: "video",
-                src: "Videos/Becoming_Trailer.mp4"
+                src: "Videos/BecomingTrailer.mp4"
             },
             {
                 type: "image",
@@ -80,6 +89,11 @@ const PROJECTS = [
             }
         ]
     },
+
+
+    // ========================================
+    // 02 — TAU VEHICLES
+    // ========================================
 
     {
         id: "02",
@@ -129,6 +143,11 @@ const PROJECTS = [
         ]
     },
 
+
+    // ========================================
+    // 03 — ART CLASS
+    // ========================================
+
     {
         id: "03",
         title: "Art Class",
@@ -172,6 +191,11 @@ const PROJECTS = [
             }
         ]
     },
+
+
+    // ========================================
+    // 04 — SPIDER MEADOW
+    // ========================================
 
     {
         id: "04",
@@ -221,6 +245,11 @@ const PROJECTS = [
         ]
     },
 
+
+    // ========================================
+    // 05 — NOISE MAP GENERATOR
+    // ========================================
+
     {
         id: "05",
         title: "Noise Map Generator",
@@ -265,6 +294,11 @@ const PROJECTS = [
         ]
     },
 
+
+    // ========================================
+    // 06 — VR ESCAPE ROOM
+    // ========================================
+
     {
         id: "06",
         title: "VR Escape Room",
@@ -297,8 +331,58 @@ const PROJECTS = [
         ]
     },
 
+
+    // ========================================
+    // 07 — PHP FINAL PROJECT
+    // ========================================
+
     {
         id: "07",
+        title: "PHP Web Application",
+
+        role: "Full-Stack Developer (Solo)",
+        stack: "PHP · MySQL · Apache · HTML · CSS · JavaScript",
+
+        status: "School Final Project",
+        metric: "Backend development · Database architecture · Self-hosted",
+
+        description:
+            "A web application developed as my final school project, covering both application development and server-side infrastructure. I built the project using PHP and designed the underlying relational database structure, including tables and relationships between data. I also worked with Apache for self-hosting and configured the application to operate as a complete web system. The project gave me practical experience with backend programming, database architecture, server configuration, and connecting multiple parts of a web application together.",
+
+        media: [
+            {
+                type: "image",
+                src: "Thumbnails/Database2.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/Database3.png"
+            }
+        ],
+
+        links: [
+            {
+                label: "GitHub",
+                url: "https://github.com/Darkuu/RVTWebsiteRepo"
+            }
+        ]
+    }
+
+];
+
+
+// ============================================
+// MISC PROJECT DATA
+// ============================================
+
+const MISC_PROJECTS = [
+
+    // ========================================
+    // 08 — BLENDER CHARACTERS
+    // ========================================
+
+    {
+        id: "08",
         title: "Blender Characters",
 
         role: "3D Artist (Coursework)",
@@ -328,8 +412,13 @@ const PROJECTS = [
         links: []
     },
 
+
+    // ========================================
+    // 09 — BLENDER STATUE
+    // ========================================
+
     {
-        id: "08",
+        id: "09",
         title: "Blender Statue",
 
         role: "3D Artist (Coursework)",
@@ -355,8 +444,13 @@ const PROJECTS = [
         links: []
     },
 
+
+    // ========================================
+    // 10 — ROSTER & DATABASE AUTOMATION
+    // ========================================
+
     {
-        id: "09",
+        id: "10",
         title: "Roster & Database Automation",
 
         role: "Systems Developer (Solo)",
@@ -389,6 +483,7 @@ const PROJECTS = [
 
         links: []
     }
+
 ];
 
 
@@ -397,14 +492,20 @@ const PROJECTS = [
 // ============================================
 
 async function trackPageView() {
-    const el = document.getElementById("pageViews");
+
+    const el =
+        document.getElementById("pageViews");
 
     if (!el) return;
 
-    const namespace = location.hostname || "local-preview";
-    const key = "portfolio-visits";
+    const namespace =
+        location.hostname || "local-preview";
+
+    const key =
+        "portfolio-visits";
 
     try {
+
         const res = await fetch(
             `https://abacus.jasoncameron.dev/hit/${namespace}/${key}`
         );
@@ -413,13 +514,19 @@ async function trackPageView() {
             throw new Error("Counter unavailable");
         }
 
-        const data = await res.json();
+        const data =
+            await res.json();
 
         el.textContent =
             Number(data.value).toLocaleString();
 
     } catch (err) {
-        console.warn("Page counter unavailable:", err);
+
+        console.warn(
+            "Page counter unavailable:",
+            err
+        );
+
         el.textContent = "—";
     }
 }
@@ -431,9 +538,14 @@ async function trackPageView() {
 
 function mediaMarkup(item, index, active) {
 
-    const hidden = active ? "" : "hidden";
+    const hidden =
+        active ? "" : "hidden";
+
+
+    // VIDEO
 
     if (item.type === "video") {
+
         return `
             <video
                 ${hidden}
@@ -442,11 +554,34 @@ function mediaMarkup(item, index, active) {
                 playsinline
                 preload="metadata"
             >
-                <source src="${item.src}" type="video/mp4">
+                <source
+                    src="${item.src}"
+                    type="video/mp4"
+                >
+
                 Your browser does not support video.
             </video>
         `;
     }
+
+
+    // GIF
+
+    if (item.type === "gif") {
+
+        return `
+            <img
+                ${hidden}
+                data-media-index="${index}"
+                src="${item.src}"
+                alt=""
+                loading="lazy"
+            >
+        `;
+    }
+
+
+    // IMAGE
 
     return `
         <img
@@ -466,7 +601,10 @@ function mediaMarkup(item, index, active) {
 
 function awardMarkup(project) {
 
-    if (!project.awards || project.awards.length === 0) {
+    if (
+        !project.awards ||
+        project.awards.length === 0
+    ) {
         return "";
     }
 
@@ -506,12 +644,16 @@ function awardMarkup(project) {
 
 function linksMarkup(links) {
 
-    if (!links || links.length === 0) {
+    if (
+        !links ||
+        links.length === 0
+    ) {
         return "";
     }
 
     return `
         <div class="dossier-links">
+
             ${links.map(link => `
                 <a
                     href="${link.url}"
@@ -521,235 +663,727 @@ function linksMarkup(links) {
                     ${link.label} ↗
                 </a>
             `).join("")}
+
         </div>
     `;
 }
 
 
 // ============================================
-// RENDER PROJECTS
+// RENDER MAIN PROJECTS
 // ============================================
 
 function renderDossiers() {
 
     const container =
-        document.getElementById("dossier-list");
+        document.getElementById(
+            "dossier-list"
+        );
 
     if (!container) {
+
         console.error(
             "ERROR: #dossier-list was not found."
         );
+
         return;
     }
 
-    container.innerHTML = PROJECTS.map((project, projectIndex) => {
 
-        const featuredClass =
-            project.featured
-                ? "featured-dossier"
-                : "";
+    container.innerHTML =
+        PROJECTS.map(
+            (project, projectIndex) => {
 
-        return `
-            <article
-                class="dossier ${featuredClass}"
-                data-case="${project.id}"
-            >
+                const featuredClass =
+                    project.featured
+                        ? "featured-dossier"
+                        : "";
 
-                <div class="dossier-media">
 
-                    ${project.featured ? `
-                        <div class="featured-label">
-                            <span>FEATURED PROJECT</span>
-                            <span>CASE FILE — ${project.id}</span>
-                        </div>
-                    ` : ""}
-
-                    <div
-                        class="media-frame"
-                        id="frame-${projectIndex}"
+                return `
+                    <article
+                        class="dossier ${featuredClass}"
+                        data-case="${project.id}"
                     >
 
-                        ${project.media.map((media, mediaIndex) =>
-            mediaMarkup(
-                media,
-                mediaIndex,
-                mediaIndex === 0
-            )
-        ).join("")}
+                        <div class="dossier-media">
 
-                        ${awardMarkup(project)}
+                            ${project.featured ? `
+                                <div class="featured-label">
 
-                    </div>
+                                    <span>
+                                        FEATURED PROJECT
+                                    </span>
 
-                    ${project.media.length > 1 ? `
-                        <div class="media-thumbs">
+                                    <span>
+                                        CASE FILE — ${project.id}
+                                    </span>
 
-                            ${project.media.map((media, mediaIndex) => `
+                                </div>
+                            ` : ""}
 
-                                <button
-                                    type="button"
-                                    class="thumb ${media.type === "video"
-                ? "thumb-video"
-                : ""
-            } ${mediaIndex === 0
-                ? "active"
-                : ""
-            }"
-                                    data-project="${projectIndex}"
-                                    data-slide="${mediaIndex}"
-                                    aria-label="${media.type === "video"
-                ? "Play video"
-                : "View image " +
-                (mediaIndex + 1)
-            }"
-                                >
-                                    ${media.type === "video"
-                ? "▶"
-                : mediaIndex + 1
+
+                            <div
+                                class="media-frame"
+                                id="frame-${projectIndex}"
+                            >
+
+                                ${
+                                    project.media.length > 0
+                                        ? project.media.map(
+                                            (media, mediaIndex) =>
+                                                mediaMarkup(
+                                                    media,
+                                                    mediaIndex,
+                                                    mediaIndex === 0
+                                                )
+                                        ).join("")
+                                        : `
+                                            <div class="project-no-media">
+                                                <span>
+                                                    NO MEDIA AVAILABLE
+                                                </span>
+
+                                                <small>
+                                                    SOURCE CODE PROJECT
+                                                </small>
+                                            </div>
+                                        `
+                                }
+
+
+                                ${awardMarkup(project)}
+
+                            </div>
+
+
+                            ${
+                                project.media.length > 1
+                                    ? `
+
+                                    <div class="media-thumbs">
+
+                                        ${project.media.map(
+                                            (media, mediaIndex) => `
+
+                                                <button
+                                                    type="button"
+
+                                                    class="thumb ${
+                                                        media.type === "video"
+                                                            ? "thumb-video"
+                                                            : ""
+                                                    } ${
+                                                        mediaIndex === 0
+                                                            ? "active"
+                                                            : ""
+                                                    }"
+
+                                                    data-project="${projectIndex}"
+                                                    data-slide="${mediaIndex}"
+
+                                                    aria-label="${
+                                                        media.type === "video"
+                                                            ? "Play video"
+                                                            : "View image " +
+                                                              (mediaIndex + 1)
+                                                    }"
+                                                >
+                                                    ${
+                                                        media.type === "video"
+                                                            ? "▶"
+                                                            : mediaIndex + 1
+                                                    }
+                                                </button>
+
+                                            `
+                                        ).join("")}
+
+                                    </div>
+
+                                `
+                                    : ""
+                            }
+
+                        </div>
+
+
+                        <div class="dossier-spec">
+
+                            <div class="case-id">
+                                CASE FILE — ${project.id}
+                            </div>
+
+
+                            <h3>
+                                ${project.title}
+                            </h3>
+
+
+                            ${project.featured ? `
+
+                                <div class="featured-recognition">
+
+                                    <span class="recognition-symbol">
+                                        ★
+                                    </span>
+
+                                    <span>
+                                        THE ROOKIES — FINALIST &amp;
+                                        HIGHLY COMMENDED
+                                    </span>
+
+                                </div>
+
+                            ` : ""}
+
+
+                            <div class="spec-row">
+
+                                <span class="spec-label">
+                                    ROLE
+                                </span>
+
+                                <span class="spec-value">
+                                    ${project.role}
+                                </span>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <span class="spec-label">
+                                    STACK
+                                </span>
+
+                                <span class="spec-value">
+                                    ${project.stack}
+                                </span>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <span class="spec-label">
+                                    STATUS
+                                </span>
+
+                                <span class="spec-value status">
+                                    ${project.status}
+                                </span>
+
+                            </div>
+
+
+                            <div class="spec-row">
+
+                                <span class="spec-label">
+                                    METRIC
+                                </span>
+
+                                <span class="spec-value">
+                                    ${project.metric}
+                                </span>
+
+                            </div>
+
+
+                            <p class="dossier-desc">
+                                ${project.description}
+                            </p>
+
+
+                            ${linksMarkup(project.links)}
+
+                        </div>
+
+                    </article>
+                `;
             }
-                                </button>
-
-                            `).join("")}
-
-                        </div>
-                    ` : ""}
-
-                </div>
+        ).join("");
 
 
-                <div class="dossier-spec">
+    setupMainMediaControls();
 
-                    <div class="case-id">
-                        CASE FILE — ${project.id}
-                    </div>
-
-                    <h3>
-                        ${project.title}
-                    </h3>
-
-                    ${project.featured ? `
-                        <div class="featured-recognition">
-                            <span class="recognition-symbol">★</span>
-                            <span>
-                                THE ROOKIES — FINALIST &amp;
-                                HIGHLY COMMENDED
-                            </span>
-                        </div>
-                    ` : ""}
-
-                    <div class="spec-row">
-                        <span class="spec-label">ROLE</span>
-                        <span class="spec-value">
-                            ${project.role}
-                        </span>
-                    </div>
-
-                    <div class="spec-row">
-                        <span class="spec-label">STACK</span>
-                        <span class="spec-value">
-                            ${project.stack}
-                        </span>
-                    </div>
-
-                    <div class="spec-row">
-                        <span class="spec-label">STATUS</span>
-                        <span class="spec-value status">
-                            ${project.status}
-                        </span>
-                    </div>
-
-                    <div class="spec-row">
-                        <span class="spec-label">METRIC</span>
-                        <span class="spec-value">
-                            ${project.metric}
-                        </span>
-                    </div>
-
-                    <p class="dossier-desc">
-                        ${project.description}
-                    </p>
-
-                    ${linksMarkup(project.links)}
-
-                </div>
-
-            </article>
-        `;
-
-    }).join("");
+}
 
 
-    // ========================================
-    // VIDEO SETTINGS
-    // ========================================
+// ============================================
+// MAIN PROJECT MEDIA CONTROLS
+// ============================================
+
+function setupMainMediaControls() {
+
+    const container =
+        document.getElementById(
+            "dossier-list"
+        );
+
+    if (!container) return;
+
+
+    // VIDEO VOLUME
 
     container
         .querySelectorAll("video")
         .forEach(video => {
+
             video.volume = 0.5;
+
         });
 
 
-    // ========================================
     // THUMBNAIL CONTROLS
-    // ========================================
 
     container
         .querySelectorAll(".thumb")
         .forEach(button => {
 
-            button.addEventListener("click", () => {
+            button.addEventListener(
+                "click",
+                () => {
 
-                const projectIndex =
-                    Number(button.dataset.project);
+                    const projectIndex =
+                        Number(
+                            button.dataset.project
+                        );
 
-                const slideIndex =
-                    Number(button.dataset.slide);
-
-                const frame =
-                    document.getElementById(
-                        `frame-${projectIndex}`
-                    );
-
-                if (!frame) return;
+                    const slideIndex =
+                        Number(
+                            button.dataset.slide
+                        );
 
 
-                frame
-                    .querySelectorAll(
-                        "[data-media-index]"
-                    )
-                    .forEach(media => {
+                    const frame =
+                        document.getElementById(
+                            `frame-${projectIndex}`
+                        );
 
-                        const isActive =
-                            Number(
-                                media.dataset.mediaIndex
-                            ) === slideIndex;
+                    if (!frame) return;
 
-                        media.hidden = !isActive;
 
-                        if (
-                            media.tagName === "VIDEO" &&
-                            !isActive
-                        ) {
-                            media.pause();
-                            media.currentTime = 0;
-                        }
+                    frame
+                        .querySelectorAll(
+                            "[data-media-index]"
+                        )
+                        .forEach(media => {
+
+                            const isActive =
+                                Number(
+                                    media.dataset.mediaIndex
+                                ) === slideIndex;
+
+
+                            media.hidden =
+                                !isActive;
+
+
+                            if (
+                                media.tagName === "VIDEO" &&
+                                !isActive
+                            ) {
+
+                                media.pause();
+
+                                media.currentTime = 0;
+
+                            }
+
+                        });
+
+
+                    const thumbs =
+                        button
+                            .closest(".dossier-media")
+                            .querySelectorAll(
+                                ".thumb"
+                            );
+
+
+                    thumbs.forEach(thumb => {
+
+                        thumb.classList.remove(
+                            "active"
+                        );
 
                     });
 
 
-                const thumbs =
-                    button
-                        .closest(".dossier-media")
-                        .querySelectorAll(".thumb");
+                    button.classList.add(
+                        "active"
+                    );
 
-                thumbs.forEach(thumb => {
-                    thumb.classList.remove("active");
-                });
+                }
+            );
 
-                button.classList.add("active");
+        });
+}
 
-            });
+
+// ============================================
+// CREATE MISC SECTION
+// ============================================
+
+function createMiscSection() {
+
+    // Don't create it twice.
+
+    if (
+        document.getElementById(
+            "misc"
+        )
+    ) {
+        return document.getElementById(
+            "misc"
+        );
+    }
+
+
+    const dossierList =
+        document.getElementById(
+            "dossier-list"
+        );
+
+    if (!dossierList) {
+        return null;
+    }
+
+
+    const section =
+        document.createElement(
+            "section"
+        );
+
+    section.id = "misc";
+
+    section.className =
+        "misc-section";
+
+
+    section.innerHTML = `
+
+        <div class="section-heading misc-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    // MISC
+                </span>
+
+                <h2>
+                    Experiments
+                </h2>
+
+            </div>
+
+            <p>
+                Smaller prototypes, technical experiments,
+                coursework, tools and other projects.
+            </p>
+
+        </div>
+
+
+        <div
+            class="misc-grid"
+            id="misc-list"
+        ></div>
+
+    `;
+
+
+    /*
+        Insert Misc immediately after the
+        Selected Work project list.
+    */
+
+    dossierList.parentNode.insertBefore(
+        section,
+        dossierList.nextSibling
+    );
+
+
+    return section;
+}
+
+
+// ============================================
+// RENDER MISC PROJECTS
+// ============================================
+
+function renderMisc() {
+
+    const section =
+        createMiscSection();
+
+    if (!section) return;
+
+
+    const container =
+        document.getElementById(
+            "misc-list"
+        );
+
+    if (!container) return;
+
+
+    container.innerHTML =
+        MISC_PROJECTS.map(
+            (project, projectIndex) => {
+
+                return `
+
+                    <article
+                        class="misc-card"
+                        data-case="${project.id}"
+                    >
+
+                        <div class="misc-media">
+
+                            <div
+                                class="misc-media-frame"
+                                id="misc-frame-${projectIndex}"
+                            >
+
+                                ${
+                                    project.media.length > 0
+                                        ? project.media.map(
+                                            (media, mediaIndex) =>
+                                                mediaMarkup(
+                                                    media,
+                                                    mediaIndex,
+                                                    mediaIndex === 0
+                                                )
+                                        ).join("")
+                                        : `
+                                            <div class="project-no-media">
+                                                <span>
+                                                    NO MEDIA AVAILABLE
+                                                </span>
+                                            </div>
+                                        `
+                                }
+
+                            </div>
+
+
+                            ${
+                                project.media.length > 1
+                                    ? `
+
+                                    <div class="misc-thumbs">
+
+                                        ${project.media.map(
+                                            (media, mediaIndex) => `
+
+                                                <button
+                                                    type="button"
+
+                                                    class="misc-thumb ${
+                                                        media.type === "video"
+                                                            ? "thumb-video"
+                                                            : ""
+                                                    } ${
+                                                        mediaIndex === 0
+                                                            ? "active"
+                                                            : ""
+                                                    }"
+
+                                                    data-misc-project="${projectIndex}"
+                                                    data-misc-slide="${mediaIndex}"
+
+                                                    aria-label="${
+                                                        media.type === "video"
+                                                            ? "Play video"
+                                                            : "View image " +
+                                                              (mediaIndex + 1)
+                                                    }"
+                                                >
+                                                    ${
+                                                        media.type === "video"
+                                                            ? "▶"
+                                                            : mediaIndex + 1
+                                                    }
+                                                </button>
+
+                                            `
+                                        ).join("")}
+
+                                    </div>
+
+                                `
+                                    : ""
+                            }
+
+                        </div>
+
+
+                        <div class="misc-content">
+
+                            <div class="misc-case">
+                                CASE FILE — ${project.id}
+                            </div>
+
+
+                            <h3>
+                                ${project.title}
+                            </h3>
+
+
+                            <div class="misc-meta">
+
+                                <span>
+                                    ${project.role}
+                                </span>
+
+                                <span>
+                                    ${project.stack}
+                                </span>
+
+                            </div>
+
+
+                            <div class="misc-status">
+                                ${project.status}
+                            </div>
+
+
+                            <p>
+                                ${project.description}
+                            </p>
+
+
+                            <div class="misc-metric">
+                                ${project.metric}
+                            </div>
+
+
+                            ${linksMarkup(project.links)}
+
+                        </div>
+
+                    </article>
+
+                `;
+
+            }
+        ).join("");
+
+
+    setupMiscMediaControls();
+
+}
+
+
+// ============================================
+// MISC MEDIA CONTROLS
+// ============================================
+
+function setupMiscMediaControls() {
+
+    const container =
+        document.getElementById(
+            "misc-list"
+        );
+
+    if (!container) return;
+
+
+    // VIDEO SETTINGS
+
+    container
+        .querySelectorAll("video")
+        .forEach(video => {
+
+            video.volume = 0.5;
+
+        });
+
+
+    // THUMBNAIL CONTROLS
+
+    container
+        .querySelectorAll(".misc-thumb")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const projectIndex =
+                        Number(
+                            button.dataset.miscProject
+                        );
+
+                    const slideIndex =
+                        Number(
+                            button.dataset.miscSlide
+                        );
+
+
+                    const frame =
+                        document.getElementById(
+                            `misc-frame-${projectIndex}`
+                        );
+
+                    if (!frame) return;
+
+
+                    frame
+                        .querySelectorAll(
+                            "[data-media-index]"
+                        )
+                        .forEach(media => {
+
+                            const isActive =
+                                Number(
+                                    media.dataset.mediaIndex
+                                ) === slideIndex;
+
+
+                            media.hidden =
+                                !isActive;
+
+
+                            if (
+                                media.tagName === "VIDEO" &&
+                                !isActive
+                            ) {
+
+                                media.pause();
+
+                                media.currentTime = 0;
+
+                            }
+
+                        });
+
+
+                    const thumbs =
+                        button
+                            .closest(".misc-media")
+                            .querySelectorAll(
+                                ".misc-thumb"
+                            );
+
+
+                    thumbs.forEach(thumb => {
+
+                        thumb.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                }
+            );
 
         });
 }
@@ -763,37 +1397,53 @@ function setupRevealObserver() {
 
     const elements =
         document.querySelectorAll(
-            ".dossier, .specs-panel"
+            ".dossier, .specs-panel, .misc-card"
         );
 
-    if (!("IntersectionObserver" in window)) {
+
+    if (
+        !(
+            "IntersectionObserver"
+            in window
+        )
+    ) {
 
         elements.forEach(el => {
-            el.classList.add("in-view");
+
+            el.classList.add(
+                "in-view"
+            );
+
         });
 
         return;
     }
 
+
     const revealObserver =
         new IntersectionObserver(
             entries => {
 
-                entries.forEach(entry => {
+                entries.forEach(
+                    entry => {
 
-                    if (entry.isIntersecting) {
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                        entry.target.classList.add(
-                            "in-view"
-                        );
+                            entry.target.classList.add(
+                                "in-view"
+                            );
 
-                        revealObserver.unobserve(
-                            entry.target
-                        );
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
 
                     }
-
-                });
+                );
 
             },
             {
@@ -801,9 +1451,16 @@ function setupRevealObserver() {
             }
         );
 
-    elements.forEach(element => {
-        revealObserver.observe(element);
-    });
+
+    elements.forEach(
+        element => {
+
+            revealObserver.observe(
+                element
+            );
+
+        }
+    );
 }
 
 
@@ -814,34 +1471,59 @@ function setupRevealObserver() {
 function setupBootLine() {
 
     const bootline =
-        document.getElementById("bootline");
+        document.getElementById(
+            "bootline"
+        );
 
     if (!bootline) return;
+
 
     const bootText =
         "> loading profile";
 
+
     let index = 0;
 
-    bootline.textContent = "";
+
+    bootline.textContent =
+        "";
+
 
     const cursor =
-        document.createElement("span");
+        document.createElement(
+            "span"
+        );
 
-    cursor.className = "cursor";
-    cursor.textContent = "_";
+
+    cursor.className =
+        "cursor";
+
+
+    cursor.textContent =
+        "_";
 
 
     function typeBoot() {
 
-        if (index <= bootText.length) {
+        if (
+            index <=
+            bootText.length
+        ) {
 
             bootline.textContent =
-                bootText.slice(0, index);
+                bootText.slice(
+                    0,
+                    index
+                );
 
-            bootline.appendChild(cursor);
+
+            bootline.appendChild(
+                cursor
+            );
+
 
             index++;
+
 
             setTimeout(
                 typeBoot,
@@ -850,19 +1532,51 @@ function setupBootLine() {
 
         } else {
 
-            setTimeout(() => {
+            setTimeout(
+                () => {
 
-                bootline.textContent =
-                    "> profile loaded — welcome";
+                    bootline.textContent =
+                        "> profile loaded — welcome";
 
-                bootline.appendChild(cursor);
 
-            }, 400);
+                    bootline.appendChild(
+                        cursor
+                    );
+
+                },
+                400
+            );
 
         }
     }
 
+
     typeBoot();
+}
+
+
+// ============================================
+// UPDATE CASE COUNT
+// ============================================
+
+function updateCaseCount() {
+
+    const count =
+        document.getElementById(
+            "caseCount"
+        );
+
+
+    if (!count) return;
+
+
+    /*
+        Main Selected Work count only.
+        Misc is intentionally separate.
+    */
+
+    count.textContent =
+        PROJECTS.length;
 }
 
 
@@ -874,17 +1588,16 @@ document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        const count =
-            document.getElementById("caseCount");
-
-        if (count) {
-            count.textContent =
-                PROJECTS.length;
-        }
+        updateCaseCount();
 
         renderDossiers();
+
+        renderMisc();
+
         setupRevealObserver();
+
         setupBootLine();
+
         trackPageView();
 
     }
