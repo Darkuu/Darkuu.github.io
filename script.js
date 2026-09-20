@@ -590,7 +590,7 @@ function mediaMarkup(item, index, active) {
             src="${item.src}"
             alt=""
             loading="lazy"
-        >
+        />
     `;
 }
 
@@ -729,16 +729,16 @@ function renderDossiers() {
                             >
 
                                 ${
-                                    project.media.length > 0
-                                        ? project.media.map(
-                                            (media, mediaIndex) =>
-                                                mediaMarkup(
-                                                    media,
-                                                    mediaIndex,
-                                                    mediaIndex === 0
-                                                )
-                                        ).join("")
-                                        : `
+                    project.media.length > 0
+                        ? project.media.map(
+                            (media, mediaIndex) =>
+                                mediaMarkup(
+                                    media,
+                                    mediaIndex,
+                                    mediaIndex === 0
+                                )
+                        ).join("")
+                        : `
                                             <div class="project-no-media">
                                                 <span>
                                                     NO MEDIA AVAILABLE
@@ -749,7 +749,7 @@ function renderDossiers() {
                                                 </small>
                                             </div>
                                         `
-                                }
+                }
 
 
                                 ${awardMarkup(project)}
@@ -758,52 +758,52 @@ function renderDossiers() {
 
 
                             ${
-                                project.media.length > 1
-                                    ? `
+                    project.media.length > 1
+                        ? `
 
                                     <div class="media-thumbs">
 
                                         ${project.media.map(
-                                            (media, mediaIndex) => `
+                            (media, mediaIndex) => `
 
                                                 <button
                                                     type="button"
 
                                                     class="thumb ${
-                                                        media.type === "video"
-                                                            ? "thumb-video"
-                                                            : ""
-                                                    } ${
-                                                        mediaIndex === 0
-                                                            ? "active"
-                                                            : ""
-                                                    }"
+                                media.type === "video"
+                                    ? "thumb-video"
+                                    : ""
+                            } ${
+                                mediaIndex === 0
+                                    ? "active"
+                                    : ""
+                            }"
 
                                                     data-project="${projectIndex}"
                                                     data-slide="${mediaIndex}"
 
                                                     aria-label="${
-                                                        media.type === "video"
-                                                            ? "Play video"
-                                                            : "View image " +
-                                                              (mediaIndex + 1)
-                                                    }"
+                                media.type === "video"
+                                    ? "Play video"
+                                    : "View image " +
+                                    (mediaIndex + 1)
+                            }"
                                                 >
                                                     ${
-                                                        media.type === "video"
-                                                            ? "▶"
-                                                            : mediaIndex + 1
-                                                    }
+                                media.type === "video"
+                                    ? "▶"
+                                    : mediaIndex + 1
+                            }
                                                 </button>
 
                                             `
-                                        ).join("")}
+                        ).join("")}
 
                                     </div>
 
                                 `
-                                    : ""
-                            }
+                        : ""
+                }
 
                         </div>
 
@@ -924,8 +924,6 @@ function setupMainMediaControls() {
     if (!container) return;
 
 
-    // VIDEO VOLUME
-
     container
         .querySelectorAll("video")
         .forEach(video => {
@@ -934,8 +932,6 @@ function setupMainMediaControls() {
 
         });
 
-
-    // THUMBNAIL CONTROLS
 
     container
         .querySelectorAll(".thumb")
@@ -1028,8 +1024,6 @@ function setupMainMediaControls() {
 
 function createMiscSection() {
 
-    // Don't create it twice.
-
     if (
         document.getElementById(
             "misc"
@@ -1094,11 +1088,6 @@ function createMiscSection() {
     `;
 
 
-    /*
-        Insert Misc immediately after the
-        Selected Work project list.
-    */
-
     dossierList.parentNode.insertBefore(
         section,
         dossierList.nextSibling
@@ -1148,74 +1137,74 @@ function renderMisc() {
                             >
 
                                 ${
-                                    project.media.length > 0
-                                        ? project.media.map(
-                                            (media, mediaIndex) =>
-                                                mediaMarkup(
-                                                    media,
-                                                    mediaIndex,
-                                                    mediaIndex === 0
-                                                )
-                                        ).join("")
-                                        : `
+                    project.media.length > 0
+                        ? project.media.map(
+                            (media, mediaIndex) =>
+                                mediaMarkup(
+                                    media,
+                                    mediaIndex,
+                                    mediaIndex === 0
+                                )
+                        ).join("")
+                        : `
                                             <div class="project-no-media">
                                                 <span>
                                                     NO MEDIA AVAILABLE
                                                 </span>
                                             </div>
                                         `
-                                }
+                }
 
                             </div>
 
 
                             ${
-                                project.media.length > 1
-                                    ? `
+                    project.media.length > 1
+                        ? `
 
                                     <div class="misc-thumbs">
 
                                         ${project.media.map(
-                                            (media, mediaIndex) => `
+                            (media, mediaIndex) => `
 
                                                 <button
                                                     type="button"
 
                                                     class="misc-thumb ${
-                                                        media.type === "video"
-                                                            ? "thumb-video"
-                                                            : ""
-                                                    } ${
-                                                        mediaIndex === 0
-                                                            ? "active"
-                                                            : ""
-                                                    }"
+                                media.type === "video"
+                                    ? "thumb-video"
+                                    : ""
+                            } ${
+                                mediaIndex === 0
+                                    ? "active"
+                                    : ""
+                            }"
 
                                                     data-misc-project="${projectIndex}"
                                                     data-misc-slide="${mediaIndex}"
 
                                                     aria-label="${
-                                                        media.type === "video"
-                                                            ? "Play video"
-                                                            : "View image " +
-                                                              (mediaIndex + 1)
-                                                    }"
+                                media.type === "video"
+                                    ? "Play video"
+                                    : "View image " +
+                                    (mediaIndex + 1)
+                            }"
                                                 >
                                                     ${
-                                                        media.type === "video"
-                                                            ? "▶"
-                                                            : mediaIndex + 1
-                                                    }
+                                media.type === "video"
+                                    ? "▶"
+                                    : mediaIndex + 1
+                            }
                                                 </button>
 
                                             `
-                                        ).join("")}
+                        ).join("")}
 
                                     </div>
 
                                 `
-                                    : ""
-                            }
+                        : ""
+                }
 
                         </div>
 
@@ -1291,8 +1280,6 @@ function setupMiscMediaControls() {
     if (!container) return;
 
 
-    // VIDEO SETTINGS
-
     container
         .querySelectorAll("video")
         .forEach(video => {
@@ -1301,8 +1288,6 @@ function setupMiscMediaControls() {
 
         });
 
-
-    // THUMBNAIL CONTROLS
 
     container
         .querySelectorAll(".misc-thumb")
@@ -1386,6 +1371,104 @@ function setupMiscMediaControls() {
             );
 
         });
+}
+
+
+// ============================================
+// GITHUB CTA
+// ============================================
+
+function createGithubCTA() {
+
+    // Don't create it twice.
+
+    if (
+        document.getElementById(
+            "github-cta"
+        )
+    ) {
+        return document.getElementById(
+            "github-cta"
+        );
+    }
+
+
+    const miscSection =
+        document.getElementById(
+            "misc"
+        );
+
+    if (!miscSection) {
+        return null;
+    }
+
+
+    const section =
+        document.createElement(
+            "section"
+        );
+
+
+    section.id =
+        "github-cta";
+
+
+    section.className =
+        "github-cta";
+
+
+    section.innerHTML = `
+
+        <div class="github-cta-inner">
+
+            <div>
+
+                <p class="github-prompt">
+                    &gt; access_source_repository_
+                </p>
+
+                <h2>
+                    WANT TO SEE
+                    MORE?
+                </h2>
+
+                <p class="github-description">
+                    Explore more projects, experiments,
+                    prototypes and source code on my GitHub.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://github.com/Darkuu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-cta-button"
+            >
+
+                <span>
+                    SEE MY GITHUB
+                </span>
+
+                <span>
+                    /Darkuu ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    `;
+
+
+    miscSection.parentNode.insertBefore(
+        section,
+        miscSection.nextSibling
+    );
+
+
+    return section;
 }
 
 
@@ -1570,11 +1653,6 @@ function updateCaseCount() {
     if (!count) return;
 
 
-    /*
-        Main Selected Work count only.
-        Misc is intentionally separate.
-    */
-
     count.textContent =
         PROJECTS.length;
 }
@@ -1593,6 +1671,8 @@ document.addEventListener(
         renderDossiers();
 
         renderMisc();
+
+        createGithubCTA();
 
         setupRevealObserver();
 
