@@ -1480,7 +1480,7 @@ function setupRevealObserver() {
 
     const elements =
         document.querySelectorAll(
-            ".dossier, .specs-panel, .misc-card"
+            ".dossier, .specs-panel, .misc-card, .experience-item"
         );
 
 
