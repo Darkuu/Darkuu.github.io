@@ -343,6 +343,11 @@ a {
     letter-spacing: 0.02em;
 }
 
+.hero-title-accent {
+    color: var(--accent);
+    text-shadow: 0 0 36px rgba(255, 75, 31, 0.16);
+}
+
 
 .hero-role {
     margin: 1.25rem 0;
@@ -3031,6 +3036,217 @@ footer p {
 
     .github-cta-button span:last-child {
         font-size: 0.7rem;
+    }
+}
+
+
+/* ============================================
+   FINISHING DETAILS
+============================================ */
+
+.intro-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at 50% 48%, rgba(255, 75, 31, 0.09), transparent 38%),
+        var(--bg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-screen::before,
+.intro-screen::after {
+    position: absolute;
+    width: min(68vw, 680px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.045);
+    border-radius: 50%;
+    content: "";
+}
+
+.intro-screen::after {
+    width: min(48vw, 480px);
+    border-color: rgba(255, 75, 31, 0.09);
+}
+
+.intro-active .intro-screen {
+    visibility: visible;
+    opacity: 1;
+    animation: introBackdropIn 0.35s ease-out both;
+}
+
+.intro-screen > * {
+    position: relative;
+    z-index: 1;
+}
+
+.intro-mark {
+    margin-bottom: 1.2rem;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    animation: introRise 0.55s 0.05s both;
+}
+
+.intro-mark span,
+.intro-caption span {
+    color: var(--accent);
+}
+
+.intro-rule {
+    width: min(70vw, 380px);
+    height: 1px;
+    overflow: hidden;
+    background: var(--line);
+}
+
+.intro-rule span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: introProgress 1.05s 0.18s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.intro-caption {
+    margin: 1.15rem 0 0.2rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.14em;
+    animation: introRise 0.55s 0.22s both;
+}
+
+.intro-name {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(3.2rem, 9vw, 6.7rem);
+    line-height: 0.95;
+    letter-spacing: 0.025em;
+    animation: introNameIn 0.72s 0.3s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.intro-name span {
+    color: var(--accent);
+}
+
+.intro-status {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 1.5rem 0 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.09em;
+    animation: introRise 0.55s 0.46s both;
+}
+
+.intro-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ok);
+    box-shadow: 0 0 10px var(--ok);
+    animation: pulse 0.8s ease-in-out infinite;
+}
+
+.intro-version {
+    margin-left: 0.55rem;
+    color: var(--accent);
+}
+
+.intro-screen.intro-leaving {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.55s ease, visibility 0s 0.55s;
+}
+
+.intro-leaving .intro-name {
+    transform: translateY(-12px) scale(1.02);
+    transition: transform 0.55s ease;
+}
+
+@keyframes introBackdropIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes introRise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes introNameIn {
+    from { opacity: 0; transform: translateY(22px); filter: blur(8px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes introProgress {
+    0% { transform: scaleX(0); }
+    45% { transform: scaleX(0.55); }
+    100% { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro-screen { display: none; }
+}
+
+.scroll-progress {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 20;
+    height: 2px;
+    pointer-events: none;
+    background: transparent;
+}
+
+.scroll-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(255, 75, 31, 0.65);
+}
+
+.hud-nav a[aria-current="location"] {
+    color: var(--text);
+    border-color: var(--accent);
+}
+
+.section-intro,
+.contact-content,
+.github-cta-inner {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.section-intro.in-view,
+.contact-content.in-view,
+.github-cta-inner.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-intro,
+    .contact-content,
+    .github-cta-inner {
+        opacity: 1;
+        transform: none;
     }
 }
 

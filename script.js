@@ -1480,7 +1480,7 @@ function setupRevealObserver() {
 
     const elements =
         document.querySelectorAll(
-            ".dossier, .specs-panel, .misc-card, .experience-item"
+            ".dossier, .specs-panel, .misc-card, .experience-item, .section-intro, .contact-content, .github-cta-inner"
         );
 
 
@@ -1544,6 +1544,60 @@ function setupRevealObserver() {
 
         }
     );
+}
+
+
+// ============================================
+// PAGE PROGRESS & SECTION NAVIGATION
+// ============================================
+
+function setupIntroAnimation() {
+    const intro = document.getElementById("introScreen");
+    if (!intro || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    document.body.classList.add("intro-active");
+    window.setTimeout(() => {
+        intro.classList.add("intro-leaving");
+        document.body.classList.remove("intro-active");
+        window.setTimeout(() => intro.remove(), 650);
+    }, 1450);
+}
+
+function setupPageProgress() {
+    const progress = document.getElementById("scrollProgress");
+    let scheduled = false;
+
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percentage = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        if (progress) progress.style.width = `${percentage}%`;
+        scheduled = false;
+    };
+
+    window.addEventListener("scroll", () => {
+        if (!scheduled) {
+            window.requestAnimationFrame(updateProgress);
+            scheduled = true;
+        }
+    }, { passive: true });
+    updateProgress();
+
+    if (!("IntersectionObserver" in window)) return;
+    const links = [...document.querySelectorAll(".hud-nav a")];
+    const sections = links
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+    const activeObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            links.forEach(link => {
+                const active = link.hash === `#${entry.target.id}`;
+                if (active) link.setAttribute("aria-current", "location");
+                else link.removeAttribute("aria-current");
+            });
+        });
+    }, { rootMargin: "-25% 0px -60% 0px" });
+    sections.forEach(section => activeObserver.observe(section));
 }
 
 
@@ -1666,6 +1720,8 @@ document.addEventListener(
     "DOMContentLoaded",
     () => {
 
+        setupIntroAnimation();
+
         updateCaseCount();
 
         renderDossiers();
@@ -1677,6 +1733,8 @@ document.addEventListener(
         setupRevealObserver();
 
         setupBootLine();
+
+        setupPageProgress();
 
         trackPageView();
 
