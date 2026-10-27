@@ -332,42 +332,6 @@ const PROJECTS = [
     },
 
 
-    // ========================================
-    // 07 — PHP FINAL PROJECT
-    // ========================================
-
-    {
-        id: "07",
-        title: "PHP Web Application",
-
-        role: "Full-Stack Developer (Solo)",
-        stack: "PHP · MySQL · Apache · HTML · CSS · JavaScript",
-
-        status: "School Final Project",
-        metric: "Backend development · Database architecture · Self-hosted",
-
-        description:
-            "A web application developed as my final school project, covering both application development and server-side infrastructure. I built the project using PHP and designed the underlying relational database structure, including tables and relationships between data. I also worked with Apache for self-hosting and configured the application to operate as a complete web system. The project gave me practical experience with backend programming, database architecture, server configuration, and connecting multiple parts of a web application together.",
-
-        media: [
-            {
-                type: "image",
-                src: "Thumbnails/Database2.png"
-            },
-            {
-                type: "image",
-                src: "Thumbnails/Database3.png"
-            }
-        ],
-
-        links: [
-            {
-                label: "GitHub",
-                url: "https://github.com/Darkuu/RVTWebsiteRepo"
-            }
-        ]
-    }
-
 ];
 
 
@@ -376,6 +340,24 @@ const PROJECTS = [
 // ============================================
 
 const MISC_PROJECTS = [
+
+    {
+        id: "07",
+        title: "PHP Web Application",
+        role: "Full-Stack Developer (Solo)",
+        stack: "PHP · MySQL · Apache · HTML · CSS · JavaScript",
+        status: "School Final Project",
+        metric: "Backend development · Database architecture · Self-hosted",
+        description:
+            "A web application developed as my final school project, covering both application development and server-side infrastructure. I built the project using PHP and designed the underlying relational database structure, including tables and relationships between data. I also worked with Apache for self-hosting and configured the application to operate as a complete web system. The project gave me practical experience with backend programming, database architecture, server configuration, and connecting multiple parts of a web application together.",
+        media: [
+            { type: "image", src: "Thumbnails/Database2.png" },
+            { type: "image", src: "Thumbnails/Database3.png" }
+        ],
+        links: [
+            { label: "GitHub", url: "https://github.com/Darkuu/RVTWebsiteRepo" }
+        ]
+    },
 
     // ========================================
     // 08 — BLENDER CHARACTERS
@@ -481,6 +463,21 @@ const MISC_PROJECTS = [
             }
         ],
 
+        links: []
+    },
+
+    {
+        id: "11",
+        title: "Item managment prototype",
+        role: "Gameplay Prototype",
+        stack: "Item management · Simulation",
+        status: "Minor Prototype · Video",
+        metric: "Object handling · Item IDs · Daily client workflow",
+        description: "A video prototype for an item management game. Pick up and place objects, rotate and edit items, and change their values. Clothing can be washed or ironed. Items have IDs that save and load, alongside a day system with a set number of clients and adjustable time.",
+        media: [
+            { type: "image", src: "Thumbnails/BunnyPrototype1.png" },
+            { type: "video", src: "Videos/Bnuy_Prototype.mp4", poster: "Thumbnails/video_thumb.png" }
+        ],
         links: []
     }
 
