@@ -2,15 +2,18 @@
  * PROJECTS: Edit this file to add or update portfolio entries.
  *
  * Full case studies go in PROJECTS; smaller projects and prototypes go in
- * MINOR_PROJECTS. Copy an existing object or use the examples below.
+ * MINOR_PROJECTS. Copy an existing object or use the example below.
  * IDs should be unique. Media paths are relative to the site root, such as
  * "Thumbnails/example.png" or "Videos/demo.mp4". Types: image, video, gif.
- * Main entries may also use featured: true and awards: ["..."] .
+ * Main entries may also use featured: true and awards: ["..."].
+ *
+ * Save this file using UTF-8 encoding.
  */
+
 window.PROJECTS = [
 
     // ========================================
-    // 00 â€” MAKEOOBER
+    // 00 — MAKEOOBER
     // ========================================
 
     {
@@ -19,13 +22,13 @@ window.PROJECTS = [
         featured: true,
 
         role: "Lead Programmer (4-person team)",
-        stack: "Unity Â· C# Â· OpenXR",
+        stack: "Unity · C# · OpenXR",
 
         status: "FINALIST",
-        metric: "Finalist & Highly Commended â€” The Rookies",
+        metric: "Finalist & Highly Commended — The Rookies",
 
         awards: [
-            "FINALIST & HIGHLY COMMENDED THE ROOKIES 2026",
+            "FINALIST & HIGHLY COMMENDED — THE ROOKIES 2026"
         ],
 
         description:
@@ -44,7 +47,7 @@ window.PROJECTS = [
 
         links: [
             {
-                label: "Rookies",
+                label: "The Rookies",
                 url: "https://www.therookies.co/entries/50610"
             },
             {
@@ -54,9 +57,8 @@ window.PROJECTS = [
         ]
     },
 
-
     // ========================================
-    // 01 â€” BECOMING
+    // 01 — BECOMING
     // ========================================
 
     {
@@ -64,13 +66,13 @@ window.PROJECTS = [
         title: "Becoming",
 
         role: "Gameplay Programmer (Intern)",
-        stack: "Unity Â· C# Â· OpenXR",
+        stack: "Unity · C# · OpenXR",
 
         status: "Commercial Exhibition",
-        metric: "Live exhibition â€” August 2026",
+        metric: "Live exhibition — August 2026",
 
         description:
-            "Becoming is an immersive multimedia exhibition exploring personal transformation through interactive environments combining photography, virtual reality, installation art, and spatial design. As a Programming Intern at Colourless Creative, I contributed to the Unity project by implementing interaction features, fixing production bugs, supporting playtesting, and improving reliability for a public installation environment. This experience gave me practical experience working within an existing production pipeline, collaborating with artists and designers, and delivering polished features under commercial deadlines.",
+            "Becoming is an immersive multimedia exhibition exploring personal transformation through interactive environments combining photography, virtual reality, installation art, and spatial design. As a Programming Intern at Colourless Creative, I contributed to the Unity project by implementing interaction features, fixing production bugs, supporting playtesting, and improving reliability for a public installation environment. This experience gave me practical insight into working within an existing production pipeline, collaborating with artists and designers, and delivering polished features under commercial deadlines.",
 
         media: [
             {
@@ -95,20 +97,19 @@ window.PROJECTS = [
         ]
     },
 
-
     // ========================================
-    // 02 â€” TAU VEHICLES
+    // 02 — TAU VEHICLES
     // ========================================
 
     {
         id: "02",
-        title: "Tau Vehicles â€” Warhammer 40,000",
+        title: "Tau Vehicles — Warhammer 40,000",
 
         role: "Solo Developer",
-        stack: "Lua Â· Garry's Mod (Source) Â· Blender",
+        stack: "Lua · Garry's Mod (Source) · Blender",
 
         status: "Released (Community Project)",
-        metric: "6,500+ visitors Â· 1,600+ subscribers Â· 325 favourites",
+        metric: "6,500+ visitors · 1,600+ subscribers · 325 favourites",
 
         description:
             "My most popular project to date. I developed functional Warhammer 40,000-inspired weapons and vehicles for Garry's Mod using Lua, creating custom vehicle behaviour, physics systems, and exported models. The project was developed independently and is currently used by multiple active roleplay communities.",
@@ -148,9 +149,8 @@ window.PROJECTS = [
         ]
     },
 
-
     // ========================================
-    // 03 â€” ART CLASS
+    // 03 — ART CLASS
     // ========================================
 
     {
@@ -158,7 +158,7 @@ window.PROJECTS = [
         title: "Art Class",
 
         role: "Gameplay Programmer (4-person team)",
-        stack: "Unity Â· C#",
+        stack: "Unity · C#",
 
         status: "University Project",
         metric: "Educational game developed for children",
@@ -197,9 +197,8 @@ window.PROJECTS = [
         ]
     },
 
-
     // ========================================
-    // 04 â€” SPIDER MEADOW
+    // 04 — SPIDER MEADOW
     // ========================================
 
     {
@@ -207,7 +206,7 @@ window.PROJECTS = [
         title: "Spider Meadow (Webbed Valley)",
 
         role: "Gameplay Programmer (2-person team)",
-        stack: "Unity Â· C#",
+        stack: "Unity · C#",
 
         status: "Released (University Project)",
         metric: "Full release on itch.io",
@@ -244,15 +243,14 @@ window.PROJECTS = [
                 url: "https://github.com/Darkuu/Project-Spider"
             },
             {
-                label: "Itch.io",
+                label: "itch.io",
                 url: "https://daarku.itch.io/spider-meadow"
             }
         ]
     },
 
-
     // ========================================
-    // 05 â€” NOISE MAP GENERATOR
+    // 05 — NOISE MAP GENERATOR
     // ========================================
 
     {
@@ -260,7 +258,7 @@ window.PROJECTS = [
         title: "Noise Map Generator",
 
         role: "Solo Developer",
-        stack: "Unity Â· C#",
+        stack: "Unity · C#",
 
         status: "Prototype",
         metric: "Procedural generation learning project",
@@ -299,9 +297,8 @@ window.PROJECTS = [
         ]
     },
 
-
     // ========================================
-    // 06 â€” VR ESCAPE ROOM
+    // 06 — VR ESCAPE ROOM
     // ========================================
 
     {
@@ -309,7 +306,7 @@ window.PROJECTS = [
         title: "VR Escape Room",
 
         role: "Solo Developer",
-        stack: "Unity Â· C# Â· OpenXR",
+        stack: "Unity · C# · OpenXR",
 
         status: "Prototype",
         metric: "First complete VR coursework project",
@@ -334,33 +331,50 @@ window.PROJECTS = [
                 url: "https://github.com/Darkuu/EKA-Escape_Room"
             }
         ]
-    },
-
+    }
 
 ];
 
 window.MINOR_PROJECTS = [
 
+    // ========================================
+    // 07 — PHP WEB APPLICATION
+    // ========================================
+
     {
         id: "07",
         title: "PHP Web Application",
+
         role: "Full-Stack Developer (Solo)",
-        stack: "PHP Â· MySQL Â· Apache Â· HTML Â· CSS Â· JavaScript",
+        stack: "PHP · MySQL · Apache · HTML · CSS · JavaScript",
+
         status: "School Final Project",
-        metric: "Backend development Â· Database architecture Â· Self-hosted",
+        metric: "Backend development · Database architecture · Self-hosted",
+
         description:
             "A web application developed as my final school project, covering both application development and server-side infrastructure. I built the project using PHP and designed the underlying relational database structure, including tables and relationships between data. I also worked with Apache for self-hosting and configured the application to operate as a complete web system. The project gave me practical experience with backend programming, database architecture, server configuration, and connecting multiple parts of a web application together.",
+
         media: [
-            { type: "image", src: "Thumbnails/Database2.png" },
-            { type: "image", src: "Thumbnails/Database3.png" }
+            {
+                type: "image",
+                src: "Thumbnails/Database2.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/Database3.png"
+            }
         ],
+
         links: [
-            { label: "GitHub", url: "https://github.com/Darkuu/RVTWebsiteRepo" }
+            {
+                label: "GitHub",
+                url: "https://github.com/Darkuu/RVTWebsiteRepo"
+            }
         ]
     },
 
     // ========================================
-    // 08 â€” BLENDER CHARACTERS
+    // 08 — BLENDER CHARACTERS
     // ========================================
 
     {
@@ -394,9 +408,8 @@ window.MINOR_PROJECTS = [
         links: []
     },
 
-
     // ========================================
-    // 09 â€” BLENDER STATUE
+    // 09 — BLENDER STATUE
     // ========================================
 
     {
@@ -426,9 +439,8 @@ window.MINOR_PROJECTS = [
         links: []
     },
 
-
     // ========================================
-    // 10 â€” ROSTER & DATABASE AUTOMATION
+    // 10 — ROSTER & DATABASE AUTOMATION
     // ========================================
 
     {
@@ -436,7 +448,7 @@ window.MINOR_PROJECTS = [
         title: "Roster & Database Automation",
 
         role: "Systems Developer (Solo)",
-        stack: "Google Sheets Â· Apps Script Â· MySQL",
+        stack: "Google Sheets · Apps Script · MySQL",
 
         status: "Active Project",
         metric: "Used by a long-running community",
@@ -466,33 +478,92 @@ window.MINOR_PROJECTS = [
         links: []
     },
 
+    // ========================================
+    // 11 — ITEM MANAGEMENT PROTOTYPE
+    // ========================================
+
     {
         id: "11",
-        title: "Item managment prototype",
+        title: "Item Management Prototype",
+
         role: "Gameplay Prototype",
-        stack: "Item management Â· Simulation",
-        status: "Minor Prototype Â· Video",
-        metric: "Object handling Â· Item IDs Â· Daily client workflow",
-        description: "A video prototype for an item management game. Pick up and place objects, rotate and edit items, and change their values. Clothing can be washed or ironed. Items have IDs that save and load, alongside a day system with a set number of clients and adjustable time.",
+        stack: "Item management · Simulation",
+
+        status: "Minor Prototype · Video",
+        metric: "Object handling · Item IDs · Daily client workflow",
+
+        description:
+            "A prototype for an item management game, demonstrated through video. Players can pick up and place objects, rotate and edit items, and change their values. Clothing can be washed or ironed. Items use IDs for saving and loading, alongside a day system with a set number of clients and adjustable time.",
+
         media: [
-            { type: "image", src: "Thumbnails/BunnyPrototype1.png" },
-            { type: "video", src: "Videos/Bnuy_Prototype.mp4", poster: "Thumbnails/video_thumb.png" }
+            {
+                type: "image",
+                src: "Thumbnails/BunnyPrototype1.png"
+            },
+            {
+                type: "video",
+                src: "Videos/Bnuy_Prototype.mp4",
+                poster: "Thumbnails/video_thumb.png"
+            }
         ],
+
+        links: []
+    },
+
+    // ========================================
+    // 12 — SORTING ALGORITHM VISUALIZER
+    // ========================================
+
+    {
+        id: "12",
+        title: "Sorting Algorithm Visualizer",
+
+        role: "Desktop Application Developer",
+        stack: "C# · WPF · XAML · NAudio",
+
+        status: "Personal Learning Project ",
+        metric: "Algorithm visualization · Audio generation · Side-by-side comparison",
+
+        description:
+            "A Windows desktop application that visualizes Bubble, Selection, Insertion, Merge, and Quick Sort through animated bars and pitch-based audio. I developed the project with AI assistance to explore how sorting logic connects to an interactive interface, including asynchronous playback, cancellation, and real-time drawing. Features include adjustable bar counts, customizable colors, selectable audio waveforms, pitch control, and elapsed-time displays. A side-by-side comparison mode starts both visualizers from a single action, making it easier to observe how different algorithms process the same starting data. The timers measure visualization duration, including animation delays, rather than pure algorithm execution time.",
+
+        // Add your screenshots or videos here.
+        media: [
+            {
+                type: "image",
+                src: "Thumbnails/SortingAlgorithmVisualizer1.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/SortingAlgorithmVisualizer2.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/SortingAlgorithmVisualizer3.png"
+            }
+        ],
+
+        // Add your GitHub repository URL here.
         links: []
     }
 
 ];
+
 /*
- * New entry examples:
+ * New entry example:
  * {
- *   id: "12",
- *   title: "Project name",
- *   role: "Your role",
+ *   id: "13",
+ *   title: "Project Name",
+ *   role: "Your Role",
  *   stack: "Unity · C#",
  *   status: "Completed",
  *   metric: "Short result or highlight",
  *   description: "What the project is and what you contributed.",
- *   media: [{ type: "image", src: "Thumbnails/project.png" }],
- *   links: [{ label: "GitHub", url: "https://github.com/username/repository" }]
+ *   media: [
+ *     { type: "image", src: "Thumbnails/project.png" }
+ *   ],
+ *   links: [
+ *     { label: "GitHub", url: "https://github.com/username/repository" }
+ *   ]
  * }
  */
