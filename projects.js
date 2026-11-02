@@ -335,42 +335,52 @@ window.PROJECTS = [
 
 ];
 
+
 window.MINOR_PROJECTS = [
 
     // ========================================
-    // 07 — PHP WEB APPLICATION
+    // 07 — SORTING ALGORITHM
     // ========================================
 
     {
         id: "07",
-        title: "PHP Web Application",
+        title: "Sorting Algorithm Visualizer",
 
-        role: "Full-Stack Developer (Solo)",
-        stack: "PHP · MySQL · Apache · HTML · CSS · JavaScript",
+        role: "Desktop Application Developer",
+        stack: "C# · WPF · XAML · NAudio",
 
-        status: "School Final Project",
-        metric: "Backend development · Database architecture · Self-hosted",
+        status: "Personal Learning Project ",
+        metric: "Algorithm visualization · Audio generation · Side-by-side comparison",
 
         description:
-            "A web application developed as my final school project, covering both application development and server-side infrastructure. I built the project using PHP and designed the underlying relational database structure, including tables and relationships between data. I also worked with Apache for self-hosting and configured the application to operate as a complete web system. The project gave me practical experience with backend programming, database architecture, server configuration, and connecting multiple parts of a web application together.",
+            "A Windows desktop application that visualizes Bubble, Selection, Insertion, Merge, and Quick Sort through animated bars and pitch-based audio. I developed the project with AI assistance to explore how sorting logic connects to an interactive interface, including asynchronous playback, cancellation, and real-time drawing. Features include adjustable bar counts, customizable colors, selectable audio waveforms, pitch control, and elapsed-time displays. A side-by-side comparison mode starts both visualizers from a single action, making it easier to observe how different algorithms process the same starting data. The timers measure visualization duration, including animation delays, rather than pure algorithm execution time.",
 
+        // Add your screenshots or videos here.
         media: [
             {
-                type: "image",
-                src: "Thumbnails/Database2.png"
+                type: "video",
+                src: "Videos/SortingAlgorithmVisualizer1.mp4"
+            },
+            {
+                type: "video",
+                src: "Videos/SortingAlgorithmVisualizer2.mp4"
             },
             {
                 type: "image",
-                src: "Thumbnails/Database3.png"
+                src: "Thumbnails/SortingAlgorithmVisualizer3.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/SortingAlgorithmVisualizer1.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/SortingAlgorithmVisualizer2.png"
             }
         ],
 
-        links: [
-            {
-                label: "GitHub",
-                url: "https://github.com/Darkuu/RVTWebsiteRepo"
-            }
-        ]
+        // Add your GitHub repository URL here.
+        links: []
     },
 
     // ========================================
@@ -511,46 +521,47 @@ window.MINOR_PROJECTS = [
     },
 
     // ========================================
-    // 12 — SORTING ALGORITHM VISUALIZER
+    // 12 — PHP WEB APPLICATION
     // ========================================
 
     {
         id: "12",
-        title: "Sorting Algorithm Visualizer",
+        title: "PHP Web Application",
 
-        role: "Desktop Application Developer",
-        stack: "C# · WPF · XAML · NAudio",
+        role: "Full-Stack Developer (Solo)",
+        stack: "PHP · MySQL · Apache · HTML · CSS · JavaScript",
 
-        status: "Personal Learning Project ",
-        metric: "Algorithm visualization · Audio generation · Side-by-side comparison",
+        status: "School Final Project",
+        metric: "Backend development · Database architecture · Self-hosted",
 
         description:
-            "A Windows desktop application that visualizes Bubble, Selection, Insertion, Merge, and Quick Sort through animated bars and pitch-based audio. I developed the project with AI assistance to explore how sorting logic connects to an interactive interface, including asynchronous playback, cancellation, and real-time drawing. Features include adjustable bar counts, customizable colors, selectable audio waveforms, pitch control, and elapsed-time displays. A side-by-side comparison mode starts both visualizers from a single action, making it easier to observe how different algorithms process the same starting data. The timers measure visualization duration, including animation delays, rather than pure algorithm execution time.",
+            "A web application developed as my final school project, covering both application development and server-side infrastructure. I built the project using PHP and designed the underlying relational database structure, including tables and relationships between data. I also worked with Apache for self-hosting and configured the application to operate as a complete web system. The project gave me practical experience with backend programming, database architecture, server configuration, and connecting multiple parts of a web application together.",
 
-        // Add your screenshots or videos here.
         media: [
             {
                 type: "image",
-                src: "Thumbnails/SortingAlgorithmVisualizer1.png"
+                src: "Thumbnails/Database2.png"
             },
             {
                 type: "image",
-                src: "Thumbnails/SortingAlgorithmVisualizer2.png"
-            },
-            {
-                type: "image",
-                src: "Thumbnails/SortingAlgorithmVisualizer3.png"
+                src: "Thumbnails/Database3.png"
             }
         ],
 
-        // Add your GitHub repository URL here.
-        links: []
+        links: [
+            {
+                label: "GitHub",
+                url: "https://github.com/Darkuu/RVTWebsiteRepo"
+            }
+        ]
     }
 
 ];
 
+
 /*
  * New entry example:
+ *
  * {
  *   id: "13",
  *   title: "Project Name",
