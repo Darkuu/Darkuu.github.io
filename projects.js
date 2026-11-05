@@ -250,51 +250,46 @@ window.PROJECTS = [
     },
 
     // ========================================
-    // 05 — NOISE MAP GENERATOR
+    // 05 — SORTING ALGORITHM VISUALIZER
     // ========================================
 
     {
         id: "05",
-        title: "Noise Map Generator",
+        title: "Sorting Algorithm Visualizer",
 
-        role: "Solo Developer",
-        stack: "Unity · C#",
+        role: "Desktop Application Developer",
+        stack: "C# · WPF · XAML · NAudio",
 
-        status: "Prototype",
-        metric: "Procedural generation learning project",
+        status: "Personal Learning Project",
+        metric: "Algorithm visualization · Audio generation · Side-by-side comparison",
 
         description:
-            "A procedural terrain generation prototype created to explore noise-based systems. I implemented terrain generation using noise algorithms and used the project to develop my understanding of procedural workflows, which later influenced my work with more advanced systems.",
+            "A Windows desktop application that visualizes Bubble, Selection, Insertion, Merge, and Quick Sort through animated bars and pitch-based audio. I developed the project with AI assistance to explore how sorting logic connects to an interactive interface, including asynchronous playback, cancellation, and real-time drawing. Features include adjustable bar counts, customizable colors, selectable audio waveforms, pitch control, and elapsed-time displays. A side-by-side comparison mode starts both visualizers from a single action, making it easier to observe how different algorithms process the same starting data. The timers measure visualization duration, including animation delays, rather than pure algorithm execution time.",
 
         media: [
             {
-                type: "image",
-                src: "Thumbnails/NoiseGame.jpg"
+                type: "video",
+                src: "Videos/SortingAlgorithmVisualizer1.mp4"
+            },
+            {
+                type: "video",
+                src: "Videos/SortingAlgorithmVisualizer2.mp4"
             },
             {
                 type: "image",
-                src: "Thumbnails/LandGenerator1.png"
+                src: "Thumbnails/SortingAlgorithmVisualizer3.png"
             },
             {
                 type: "image",
-                src: "Thumbnails/LandGenerator2.png"
+                src: "Thumbnails/SortingAlgorithmVisualizer1.png"
             },
             {
                 type: "image",
-                src: "Thumbnails/LandGenerator3.png"
+                src: "Thumbnails/SortingAlgorithmVisualizer2.png"
             }
         ],
 
-        links: [
-            {
-                label: "GitHub",
-                url: "https://github.com/Darkuu/LandGenerator"
-            },
-            {
-                label: "Play It",
-                url: "https://play.unity.com/en/games/02df1b75-df99-4be6-9cad-80be371dbd2c/land-generator-prototype"
-            }
-        ]
+        links: []
     },
 
     // ========================================
@@ -339,56 +334,95 @@ window.PROJECTS = [
 window.MINOR_PROJECTS = [
 
     // ========================================
-    // 07 — SORTING ALGORITHM
+    // 07 — TRACKER
     // ========================================
 
     {
         id: "07",
-        title: "Sorting Algorithm Visualizer",
+        title: "Tracker Dashboard",
 
-        role: "Desktop Application Developer",
-        stack: "C# · WPF · XAML · NAudio",
+        role: "Full-Stack Developer (Solo)",
+        stack: "C# · WPF · XAML",
 
-        status: "Personal Learning Project ",
-        metric: "Algorithm visualization · Audio generation · Side-by-side comparison",
+        status: "Released",
+        metric: "Data Display · Statistics",
 
         description:
-            "A Windows desktop application that visualizes Bubble, Selection, Insertion, Merge, and Quick Sort through animated bars and pitch-based audio. I developed the project with AI assistance to explore how sorting logic connects to an interactive interface, including asynchronous playback, cancellation, and real-time drawing. Features include adjustable bar counts, customizable colors, selectable audio waveforms, pitch control, and elapsed-time displays. A side-by-side comparison mode starts both visualizers from a single action, making it easier to observe how different algorithms process the same starting data. The timers measure visualization duration, including animation delays, rather than pure algorithm execution time.",
+            "An application built with C# and WPF. It lets users organize habits into categories, record daily progress for two people, and visualize activity through monthly, yearly, and all-time statistics. It also includes local JSON persistence, CSV export, and backup support.",
 
-        // Add your screenshots or videos here.
         media: [
             {
-                type: "video",
-                src: "Videos/SortingAlgorithmVisualizer1.mp4"
-            },
-            {
-                type: "video",
-                src: "Videos/SortingAlgorithmVisualizer2.mp4"
+                type: "image",
+                src: "Thumbnails/Tracker1.png"
             },
             {
                 type: "image",
-                src: "Thumbnails/SortingAlgorithmVisualizer3.png"
-            },
-            {
-                type: "image",
-                src: "Thumbnails/SortingAlgorithmVisualizer1.png"
-            },
-            {
-                type: "image",
-                src: "Thumbnails/SortingAlgorithmVisualizer2.png"
+                src: "Thumbnails/Tracker2.png"
             }
         ],
 
-        // Add your GitHub repository URL here.
-        links: []
+        links: [
+            {
+                label: "GitHub",
+                url: "https://github.com/Darkuu/TrackerApplication01"
+            }
+        ]
     },
 
     // ========================================
-    // 08 — BLENDER CHARACTERS
+    // 08 — NOISE MAP GENERATOR
     // ========================================
 
     {
         id: "08",
+        title: "Noise Map Generator",
+
+        role: "Solo Developer",
+        stack: "Unity · C#",
+
+        status: "Prototype",
+        metric: "Procedural generation learning project",
+
+        description:
+            "A procedural terrain generation prototype created to explore noise-based systems. I implemented terrain generation using noise algorithms and used the project to develop my understanding of procedural workflows, which later influenced my work with more advanced systems.",
+
+        media: [
+            {
+                type: "image",
+                src: "Thumbnails/NoiseGame.jpg"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/LandGenerator1.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/LandGenerator2.png"
+            },
+            {
+                type: "image",
+                src: "Thumbnails/LandGenerator3.png"
+            }
+        ],
+
+        links: [
+            {
+                label: "GitHub",
+                url: "https://github.com/Darkuu/LandGenerator"
+            },
+            {
+                label: "Play It",
+                url: "https://play.unity.com/en/games/02df1b75-df99-4be6-9cad-80be371dbd2c/land-generator-prototype"
+            }
+        ]
+    },
+
+    // ========================================
+    // 09 — BLENDER CHARACTERS
+    // ========================================
+
+    {
+        id: "09",
         title: "Blender Characters",
 
         role: "3D Artist (Coursework)",
@@ -419,11 +453,11 @@ window.MINOR_PROJECTS = [
     },
 
     // ========================================
-    // 09 — BLENDER STATUE
+    // 10 — BLENDER STATUE
     // ========================================
 
     {
-        id: "09",
+        id: "10",
         title: "Blender Statue",
 
         role: "3D Artist (Coursework)",
@@ -450,11 +484,11 @@ window.MINOR_PROJECTS = [
     },
 
     // ========================================
-    // 10 — ROSTER & DATABASE AUTOMATION
+    // 11 — ROSTER & DATABASE AUTOMATION
     // ========================================
 
     {
-        id: "10",
+        id: "11",
         title: "Roster & Database Automation",
 
         role: "Systems Developer (Solo)",
@@ -489,11 +523,11 @@ window.MINOR_PROJECTS = [
     },
 
     // ========================================
-    // 11 — ITEM MANAGEMENT PROTOTYPE
+    // 12 — ITEM MANAGEMENT PROTOTYPE
     // ========================================
 
     {
-        id: "11",
+        id: "12",
         title: "Item Management Prototype",
 
         role: "Gameplay Prototype",
@@ -521,11 +555,11 @@ window.MINOR_PROJECTS = [
     },
 
     // ========================================
-    // 12 — PHP WEB APPLICATION
+    // 13 — PHP WEB APPLICATION
     // ========================================
 
     {
-        id: "12",
+        id: "13",
         title: "PHP Web Application",
 
         role: "Full-Stack Developer (Solo)",
@@ -555,7 +589,6 @@ window.MINOR_PROJECTS = [
             }
         ]
     }
-
 ];
 
 
@@ -563,7 +596,7 @@ window.MINOR_PROJECTS = [
  * New entry example:
  *
  * {
- *   id: "13",
+ *   id: "14",
  *   title: "Project Name",
  *   role: "Your Role",
  *   stack: "Unity · C#",
