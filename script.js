@@ -1044,6 +1044,65 @@ function updateCaseCount() {
 
 
 // ============================================
+// WINDOWS XP TASKBAR
+// ============================================
+
+function setupTaskbar() {
+    const toggle = document.getElementById("startMenuToggle");
+    const menu = document.getElementById("startMenu");
+    const clock = document.getElementById("taskbarClock");
+
+    if (clock) {
+        const updateClock = () => {
+            const now = new Date();
+            clock.dateTime = now.toISOString();
+            clock.textContent = new Intl.DateTimeFormat(undefined, {
+                hour: "numeric",
+                minute: "2-digit"
+            }).format(now);
+        };
+
+        updateClock();
+        window.setInterval(updateClock, 30_000);
+    }
+
+    if (!toggle || !menu) {
+        return;
+    }
+
+    const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+    };
+
+    toggle.addEventListener("click", () => {
+        const opening = menu.hidden;
+        menu.hidden = !opening;
+        toggle.setAttribute("aria-expanded", String(opening));
+    });
+
+    menu.addEventListener("click", event => {
+        if (event.target.closest("a")) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("pointerdown", event => {
+        if (!menu.hidden && !menu.contains(event.target) && !toggle.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && !menu.hidden) {
+            closeMenu();
+            toggle.focus();
+        }
+    });
+}
+
+
+// ============================================
 // INITIALISE
 // ============================================
 
@@ -1056,7 +1115,8 @@ function initialisePortfolio() {
         createGithubCTA,
         setupRevealObserver,
         setupBootLine,
-        setupPageProgress
+        setupPageProgress,
+        setupTaskbar
     ];
 
     // A failure in one feature should not stop all other features.

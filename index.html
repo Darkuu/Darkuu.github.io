@@ -11,7 +11,7 @@
           content="Rihards Zorgis — Game Programmer and Developer specialising in Unity, C#, XR, gameplay systems and technical development.">
 
     <meta name="author" content="Rihards Zorgis">
-    <meta name="theme-color" content="#0A0A0C">
+    <meta name="theme-color" content="#1466c5">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect"
@@ -104,8 +104,9 @@
      id="introScreen"
      aria-hidden="true">
 
-    <div class="intro-mark">
-        RZ<span>_</span>
+    <div class="xp-boot-brand">
+        <span class="xp-flag" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="xp-brand-copy"><span>Microsoft</span><strong>Windows<span>XP</span></strong></span>
     </div>
 
     <div class="intro-rule">
@@ -113,17 +114,16 @@
     </div>
 
     <p class="intro-caption">
-        GAME PROGRAMMER <span>·</span> DEVELOPER
+        Professional
     </p>
 
     <p class="intro-name">
-        RIHARDS <span>ZORGIS</span>
+        Welcome
     </p>
 
     <p class="intro-status">
         <span class="intro-status-dot"></span>
-        INITIALISING PORTFOLIO
-        <span class="intro-version">2026.10</span>
+        Starting your portfolio...
     </p>
 
 </div>
@@ -172,6 +172,11 @@
 
         <div class="hero-inner">
 
+            <div class="xp-titlebar">
+                <span>Welcome to Rihards Zorgis' Portfolio</span>
+                <span class="xp-window-controls" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span>
+            </div>
+
             <p class="terminal-line" id="bootline">
                 &gt; loading profile<span class="cursor" aria-hidden="true">_</span>
             </p>
@@ -215,12 +220,7 @@
                aria-label="Portfolio information">
 
             <div class="readout-header">
-                SYSTEM_READOUT
-            </div>
-
-            <div class="readout-row">
-                <span>VIEWS</span>
-                <span id="pageViews">—</span>
+                System Properties
             </div>
 
             <div class="readout-row">
@@ -254,6 +254,8 @@
     <section class="work"
              id="work"
              aria-labelledby="work-title">
+
+        <div class="xp-titlebar"><span>My Projects</span><span class="xp-window-controls" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
 
         <div class="section-label">
             // PROJECT FILES
@@ -294,6 +296,8 @@
              id="misc"
              aria-labelledby="misc-title">
 
+        <div class="xp-titlebar"><span>More Projects</span><span class="xp-window-controls" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+
         <div class="section-label">
             // ADDITIONAL PROJECTS
         </div>
@@ -323,6 +327,8 @@
     <section class="specs"
              id="about"
              aria-labelledby="about-title">
+
+        <div class="xp-titlebar"><span>About Rihards</span><span class="xp-window-controls" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
 
         <div class="section-label">
             // PROFILE
@@ -397,6 +403,8 @@
     <section class="experience"
              id="experience"
              aria-labelledby="experience-title">
+
+        <div class="xp-titlebar"><span>Experience</span><span class="xp-window-controls" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
 
         <div class="section-label">
             // EXPERIENCE_LOG
@@ -557,12 +565,14 @@
              id="contact"
              aria-labelledby="contact-title">
 
+        <div class="xp-titlebar"><span>Contact</span><span class="xp-window-controls" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+
         <div class="contact-content">
 
             <div>
 
                 <p class="contact-prompt">
-                    &gt; establish_connection_
+                    &gt; new message to Rihards_
                 </p>
 
                 <h2 id="contact-title">
@@ -630,14 +640,29 @@
      FOOTER
 ========================================= -->
 
-<footer>
+<footer class="xp-taskbar" aria-label="Desktop taskbar">
+    <button class="xp-start-button" id="startMenuToggle" type="button" aria-expanded="false" aria-controls="startMenu">
+        <span class="xp-start-mark" aria-hidden="true">⊞</span> Start
+    </button>
 
-    <p>
-        RIHARDS ZORGIS · GAME PROGRAMMER &amp; DEVELOPER
-    </p>
+    <nav class="xp-start-menu" id="startMenu" aria-label="Start menu" hidden>
+        <div class="xp-start-banner"><strong>Rihards Zorgis</strong><span>Portfolio</span></div>
+        <a href="#work"><span aria-hidden="true">📁</span> My Projects</a>
+        <a href="#misc"><span aria-hidden="true">🧩</span> More Projects</a>
+        <a href="#about"><span aria-hidden="true">👤</span> About Me</a>
+        <a href="#experience"><span aria-hidden="true">🗂️</span> Experience</a>
+        <a href="#contact"><span aria-hidden="true">✉️</span> Contact</a>
+        <div class="xp-start-footer">All programs <span aria-hidden="true">▶</span></div>
+    </nav>
 
-    <p>© 2026</p>
+    <a class="xp-task-button" href="#top" aria-label="Active window: Rihards Zorgis Portfolio">
+        <span aria-hidden="true">🪟</span> Rihards Zorgis — Portfolio
+    </a>
 
+    <div class="xp-system-tray">
+        <span class="xp-tray-icon" aria-hidden="true">🔊</span>
+        <time id="taskbarClock" aria-label="Local time"></time>
+    </div>
 </footer>
 
 <!-- Project data must load before the rendering script. -->
